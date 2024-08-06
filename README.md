@@ -19,7 +19,11 @@ I am a passionate and dedicated IT professional with a background in Computer Sc
 
 ## Projects
 
-### Project 1 
+### Project 1: Chat-Bot Integration for Intranet Website
+
+- **Description:** Developed a Chat-Bot using the Rasa framework to provide users with FAQs and basic support.
+- **Technologies Used:** Rasa, Python, NLU, Dialog Management
+- **Highlights:** Successfully integrated the Chat-Bot into the intranet, improving user interaction and support efficiency.
 
 ## Skills
 
@@ -38,7 +42,7 @@ I am a passionate and dedicated IT professional with a background in Computer Sc
 
 ## Experience
 
-- **IT Professional**
+- **Junior Technical Support Analyst**
   -  Philippne EDS Techno-Service Inc. , March 2023 - Present
   
 
@@ -49,9 +53,9 @@ I am a passionate and dedicated IT professional with a background in Computer Sc
 
 Feel free to reach out to me via the following channels:
 
-- **Email:** [your-email@example.com](mailto:magtuliskit8@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/kit-magtulis-0532362b7/)
-- **GitHub:** [Your GitHub Profile](https://github.com/keetMagtulis)
+- **Email:** [magtuliskit8@gmail.com](mailto:magtuliskit8@gmail.com)
+- **LinkedIn:** [Kit Dominic Magtulis](https://www.linkedin.com/in/kit-magtulis-0532362b7/)
+- **GitHub:** [keetMagtulis](https://github.com/keetMagtulis)
 
 ---
 
