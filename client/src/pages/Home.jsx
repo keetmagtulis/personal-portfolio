@@ -7,7 +7,7 @@ import '../../src/styles/index.css'; // Ensure this file imports Tailwind CSS co
 const Home = () => {
 
   const onButtonClick = () => {
-    const pdfUrl = "../Kit _Magtulis_CV.pdf";
+    const pdfUrl = "/Kit _Magtulis_CV.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Kit_Magtulis_CV.pdf"; // specify the filename
