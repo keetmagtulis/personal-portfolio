@@ -11,7 +11,7 @@ function App() {
   return (
 
 
-    <div class=" h-screen absolute inset-0 -z-10 w-full items-center px-5 py-5 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#808080_100%)]">
+    <div class="absolute inset-0 -z-10 w-full h-full items-center px-5 py-5 bg-gradient-to-br from-black from-0% via-black via-50% to-rose-950 to-100%">
 
     
 
