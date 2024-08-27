@@ -26,12 +26,12 @@ const Home = () => {
           <img src="/images/Graduation Picture.jpg" alt="Profile" className="w-full h-full object-cover" />
         </div>
         
-        <div className="text-white max-w-md">
-          <h2 className="text-5xl">SOFTWARE</h2>
-          <h1 className="text-7xl mb-2">DEVELOPER</h1>
+        <div className=" max-w-md">
+          <h2 className="text-stone-900 text-5xl font-semibold">SOFTWARE</h2>
+          <h1 className="text-stone-900 text-7xl mb-2 font-bold">DEVELOPER</h1>
           <p>Hi, I’m Kit. I’m an IT Professional with 2 years of experience focusing on IT and Technical Support, Network Administration, Active Directory Management, and Software Development.</p>
 
-          <button className="bg-red-700 px-6 py-2 mt-9 rounded-full flex items-center justify-center" onClick={onButtonClick}>Download CV <img src="/images/download-2-24.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img></button>
+          <button className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center" onClick={onButtonClick}>Download CV <img src="/images/download-2-24.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img></button>
 
         </div>
 

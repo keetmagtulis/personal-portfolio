@@ -11,7 +11,7 @@ function App() {
   return (
 
 
-    <div class="absolute inset-0 -z-10 w-full h-full items-center px-5 py-5 bg-gradient-to-br from-black from-0% via-black via-50% to-rose-950 to-100%">
+    <div class="absolute inset-0 -z-10 w-full h-full items-center px-5 py-5 bg-gradient-to-b from-neutral-300 from-0% via-neutral-400 via-60% to-neutral-700 to-100%">
 
     
 
