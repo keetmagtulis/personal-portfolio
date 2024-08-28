@@ -6,26 +6,30 @@ const About= () => {
 
     return (
 
-      <div className="grid grid-cols-3 gap-20 mx-auto w-9/12">
+      <div className="gap-20 mx-auto w-2/3">
+      
       <div className="col-span-3">
-        <h2 className="text-gray-800 text-xl font-bold mb-2">ABOUT ME</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+        <h2 className="text-gray-800 text-5xl font-bold my-5">ABOUT ME</h2>
+        <p className="text-lg">My name is Kit, and I’m a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new. </p>
       </div>
-      <div className="col-span-1 flex flex-col ">
-        <h2 className="text-gray-800 text-xl font-bold mb-2">SKILLS</h2>
-        <p>Network Administration</p>
-        <p>Active Directory Management</p>
-        <p>Domain Management</p>
-        <p>Software Development</p>
-        <p>Web Development</p>
-        <p>React JS</p>
-        <p>Node JS / Express</p>
-        <p>Python</p>
-        <p>Tailwind / CSS / Bootstrap</p>
-        <p>SQL</p>
+
+      <div className="grid grid-cols-2 mx-auto w-2/3 mt-10">
+
+      <div className=" flex flex-col">
+        <h2 className="text-gray-800 text-4xl font-bold mb-2">SKILLS</h2>
+        <p className="text-lg my-1">Network Administration</p>
+        <p className="text-lg my-1">Active Directory Management</p>
+        <p className="text-lg my-1">Domain Management</p>
+        <p className="text-lg my-1">Software Development</p>
+        <p className="text-lg my-1">Web Development</p>
+        <p className="text-lg my-1">React JS</p>
+        <p className="text-lg my-1">Node JS / Express</p>
+        <p className="text-lg my-1">Python</p>
+        <p className="text-lg my-1">Tailwind / CSS / Bootstrap</p>
+        <p className="text-lg my-1">SQL</p>
       </div>
-      <div className="col-span-2 flex flex-col">
-        <h2 className="text-gray-800 text-xl font-bold mb-2">WORK EXPERIENCE</h2>
+      <div className="flex flex-col">
+        <h2 className="text-gray-800 text-4xl font-bold mb-2">WORK EXPERIENCE</h2>
         <p>2023 - Present</p>
         <h3>Junior Technical Support Analyst</h3>
         <p>Philippine EDS Techno-Service, Inc.</p>
@@ -36,6 +40,10 @@ const About= () => {
         <h3>Technical Support Representative</h3>
         <p>Transcom</p>
       </div>
+
+      </div>
+
+ 
     </div>
     
     );
