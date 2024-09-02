@@ -1,5 +1,6 @@
 import React from "react";
 import '../../src/styles/index.css'; // Ensure this file imports Tailwind CSS correctly
+import { motion } from "framer-motion";
 
 
 
@@ -22,9 +23,21 @@ const Home = () => {
       <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-9/12 h-5/6 mt-1">
         
         
-        <div className="w-1/3 h-96 rounded-full overflow-hidden border-none">
+        <motion.div 
+
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+            duration: 0.8,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01]
+            }}
+          className="w-1/3 h-96 rounded-full overflow-hidden border-none">
+        
+          
           <img src="/images/profile_picture.jpg" alt="Profile" className="w-full h-full object-cover" />
-        </div>
+        
+        </motion.div>
         
         <div className=" max-w-md">
           <h2 className="text-stone-900 text-5xl font-semibold">SOFTWARE</h2>
