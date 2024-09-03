@@ -1,60 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 import '../styles/index.css';
-import {motion} from 'framer-motion';
 
 const NavBar = () => {
   return (
-    <motion.nav 
-    initial={{y:-250}}
-    animate={{y: -10}}
-    transition={{delay: 0.5}}
-    className="relative flex w-full mx-auto py-1 items-center">
-      
-      
+    <motion.nav
+      initial={{ y: -250 }}
+      animate={{ y: -10 }}
+      transition={{ delay: 0.5 }}
+      className="relative flex w-full mx-auto py-1 items-center"
+    >
       {/* Centered Navigation Links */}
       <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-3">
-        <Link
+        <RouterLink
           to="/"
           className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
         >
           HOME
-        </Link>
+        </RouterLink>
         <Link
-          to="/about"
-          className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
         >
           ABOUT
         </Link>
-        <Link
+        <RouterLink
           to="/projects"
           className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
         >
           PROJECTS
-        </Link>
-        <Link
+        </RouterLink>
+        <RouterLink
           to="/socials"
           className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
         >
           CONTACT
-        </Link>
+        </RouterLink>
       </div>
 
       <div className="ml-auto flex items-center">
-        <Link to="https://github.com/keetmagtulis">
+        <RouterLink to="https://github.com/keetmagtulis">
           <img src="/images/github-sign.png" alt="" className="w-7 h-7 mx-3" />
-        </Link>
-        <Link to="https://www.linkedin.com/in/kit-magtulis-0532362b7/">
+        </RouterLink>
+        <RouterLink to="https://www.linkedin.com/in/kit-magtulis-0532362b7/">
           <img src="/images/linkedin.png" alt="Github" className="w-7 h-7 mx-3" />
-        </Link>
-        <Link to="mailto:magtuliskit8@gmail.com">
+        </RouterLink>
+        <RouterLink to="mailto:magtuliskit8@gmail.com">
           <img src="/images/email.png" alt="" className="w-7 h-7 mx-3" />
-        </Link>
-        <Link to="https://www.messenger.com/t/100054884522654">
+        </RouterLink>
+        <RouterLink to="https://www.messenger.com/t/100054884522654">
           <img src="/images/facebook.png" alt="" className="w-7 h-7 mx-3" />
-        </Link>
+        </RouterLink>
       </div>
-
     </motion.nav>
   );
 };
