@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     
-      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-9/12 h-5/6 mt-1">
+      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-9/12 h-5/6 mt-20 mb-10">
         
         
         <motion.div 
@@ -44,7 +44,7 @@ const Home = () => {
           <h1 className="text-stone-900 text-7xl mb-2 font-bold">DEVELOPER</h1>
           <p>Hi, I’m Kit. I’m an IT Professional with 2 years of experience focusing on IT and Technical Support, Network Administration, Active Directory Management, and Software Development.</p>
 
-          <button className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center" onClick={onButtonClick}>Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img></button>
+          <button className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-lg" onClick={onButtonClick}>Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img></button>
 
         </div>
 
