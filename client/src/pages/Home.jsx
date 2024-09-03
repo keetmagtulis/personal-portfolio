@@ -44,7 +44,14 @@ const Home = () => {
           <h1 className="text-stone-900 text-7xl mb-2 font-bold">DEVELOPER</h1>
           <p>Hi, I’m Kit. I’m an IT Professional with 2 years of experience focusing on IT and Technical Support, Network Administration, Active Directory Management, and Software Development.</p>
 
-          <button className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-lg" onClick={onButtonClick}>Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img></button>
+          <motion.button 
+            whileHover={{ scale: 1.1}}
+            whileTap={{scale: 0.8}}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" 
+            onClick={onButtonClick}>
+            Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>
+          </motion.button>
 
         </div>
 
