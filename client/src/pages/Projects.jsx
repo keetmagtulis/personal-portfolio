@@ -16,7 +16,7 @@ const Projects= () => {
             className="bg-white rounded-lg shadow-md p-6">
               
               <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">PROJECT NAME</h2>
-              <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
+              <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae saepe nostrum quidem beatae minima unde exercitationem, aliquam maxime eaque sit maiores impedit, molestiae consequuntur, deserunt praesentium voluptatem itaque nulla.</p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -34,7 +34,7 @@ const Projects= () => {
             className="bg-white rounded-lg shadow-md p-6">
               
               <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">PROJECT NAME</h2>
-              <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
+              <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae libero excepturi consequatur at hic sapiente quia voluptatem saepe quaerat nobis. Atque totam ab debitis tempora. Dolorem deleniti explicabo earum ratione.</p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -52,7 +52,7 @@ const Projects= () => {
             className="bg-white rounded-lg shadow-md p-6">
               
               <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">PROJECT NAME</h2>
-              <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
+              <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nesciunt pariatur veniam architecto odio voluptas est recusandae deserunt minus unde quod illo non ex sequi incidunt, totam illum perspiciatis dolorem.</p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
