@@ -10,7 +10,7 @@ const [selectedId, setSelectedId] = useState(null);
 
     return (
 
-    <div className="flex justify-center items-center min-h-screen" id="about">
+    <div className="flex justify-center items-center min-h-auto" id="about">
         
         <div className="grid gap-6 p-10 lg:grid-cols-2 w-4/5 ">
 
