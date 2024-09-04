@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     
-      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-9/12 h-5/6 mt-20 mb-10">
+      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-3/4 min-h-auto mt-32 mb-32">
         
         
         <motion.div 
@@ -39,7 +39,12 @@ const Home = () => {
         
         </motion.div>
         
-        <div className=" max-w-md">
+        <motion.div 
+          initial={{opacity: 0, x:'100vw'}}
+          animate={{opacity: 1, x: 0}}
+          transition={{type: 'spring', stiffness: 70, delay: 0.3}}
+          className=" max-w-md">
+          
           <h2 className="text-stone-900 text-5xl font-semibold">SOFTWARE</h2>
           <h1 className="text-stone-900 text-7xl mb-2 font-bold">DEVELOPER</h1>
           <p>Hi, I’m Kit. I’m an IT Professional with 2 years of experience focusing on IT and Technical Support, Network Administration, Active Directory Management, and Software Development.</p>
@@ -53,7 +58,7 @@ const Home = () => {
             Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>
           </motion.button>
 
-        </div>
+        </motion.div>
 
       </div>
     
