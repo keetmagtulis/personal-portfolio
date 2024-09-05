@@ -40,7 +40,7 @@ const [selectedId, setSelectedId] = useState(null);
               className="bg-white rounded-lg shadow-md p-6 mb-5">
               
               <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">SKILLS</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <p>I am an IT professional with a diverse skill set that includes network administration, Active Directory management, database management, and software development. I excel in maintaining secure and efficient network environments, managing user access and data integrity, and developing software solutions that streamline processes. My expertise allows me to address a wide range of technical challenges and contribute to the smooth operation of any IT infrastructure.</p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -59,7 +59,8 @@ const [selectedId, setSelectedId] = useState(null);
               className="bg-white rounded-lg shadow-md p-6">
               
               <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <p>I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
+              </p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -111,30 +112,33 @@ const [selectedId, setSelectedId] = useState(null);
               {selectedId === "skills" && (
                 <div>
                    <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">SKILLS</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-
-                  <p className="text-lg">Additional Text for skills.</p>
-
-
+                   <h2 className="text-gray-800 text-xl font-bold mb-6">TECHNOLOGY I'M USING</h2>
+                    <li>NETWORK ADMINISTRATION</li>
+                    <li>ACTIVE DIRECTORY MANAGEMENT </li>
+                    <li> DOMAIN MANAGEMENT </li>
+                    <li>SOFTWARE DEVELOPMENT </li>
+                    <li>WEB DEVELOPMENT </li>
+                    <li>REACT JS </li>
+                    <li>NODE JS / EXPRESS </li>
+                    <li> PYTHON </li>
+                    <li>TAILWIND CSS / BOOTSTRAP</li>
+                    <li>SQL </li>   
+                    
                 </div>
               )}
 
               {selectedId === "experience" && (
                 <div>
                    <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-
-                  <p className="text-lg">Additional Text for experience.</p>
-
-
+                    <p>
+                    I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
+                    </p>
                 </div>
               )}
  
 
               <motion.button
-                className="px-4 py-2 bg-red-500 text-white rounded-md"
+                className="px-4 py-2 bg-red-500 text-white rounded-md mt-3"
                 onClick={() => setSelectedId(null)}
               >
                 Close
