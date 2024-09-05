@@ -249,7 +249,7 @@ const [selectedId, setSelectedId] = useState(null);
                     <div className="absolute -left-6 top-1.5">
                       <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
                     </div>
-                    <p className="text-gray-400">2023-Present</p>
+                    <p className="text-gray-600">2023-Present</p>
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       JUNIOR TECHNICAL SUPPORT ANALYST
                     </h3>
@@ -267,7 +267,7 @@ const [selectedId, setSelectedId] = useState(null);
                     <div className="absolute -left-6 top-1.5">
                       <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
                     </div>
-                    <p className="text-gray-400">2022-2023</p>
+                    <p className="text-gray-600">2022-2023</p>
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       CUSTOMER SERVICE REPRESENTATIVE
                     </h3>
@@ -287,7 +287,7 @@ const [selectedId, setSelectedId] = useState(null);
                     <div className="absolute -left-6 top-1.5">
                       <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
                     </div>
-                    <p className="text-gray-400">2020-2020</p>
+                    <p className="text-gray-600">2020-2020</p>
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       TECHNICAL SERVICE REPRESENTATIVE
                     </h3>
@@ -303,7 +303,7 @@ const [selectedId, setSelectedId] = useState(null);
           
 
               <motion.button
-                className="px-4 py-2 bg-red-500 text-white rounded-md mt-3"
+                className="px-4 py-2 bg-red-700 text-white rounded-md mt-3"
                 onClick={() => setSelectedId(null)}
               >
                 Close

@@ -32,8 +32,8 @@ const Home = () => {
               ease: [0, 0.71, 0.2, 1.01],
               scale: {
                 type: "spring",
-                damping: 5,
-                stiffness: 100,
+                damping: 7,
+                stiffness: 300,
                 restDelta: 0.001
               }
             }}
@@ -47,7 +47,7 @@ const Home = () => {
         <motion.div 
           initial={{opacity: 0, x:'100vw'}}
           animate={{opacity: 1, x: 0}}
-          transition={{type: 'spring', stiffness: 70, delay: 0.3}}
+          transition={{type: 'spring', stiffness: 50, delay: 0.2}}
           className=" max-w-md">
           
           <h2 className="text-stone-900 text-5xl font-semibold">SOFTWARE</h2>
