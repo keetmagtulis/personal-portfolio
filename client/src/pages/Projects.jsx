@@ -6,7 +6,7 @@ const Projects= () => {
 
     return (
 
-      <div className="flex justify-center items-center min-h-auto" id="about">
+      <div className="flex justify-center items-center min-h-auto" id="projects">
         
       <div className="grid gap-6 p-10 lg:grid-cols-3 w-4/5 ">
 

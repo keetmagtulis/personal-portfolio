@@ -30,12 +30,16 @@ const NavBar = () => {
         >
           ABOUT
         </Link>
-        <RouterLink
-          to="/projects"
-          className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="cursor-pointer text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
         >
           PROJECTS
-        </RouterLink>
+        </Link>
         <RouterLink
           to="/socials"
           className="text-gray-700 hover:underline px-2 py-2 rounded-md text-s font-normal"
