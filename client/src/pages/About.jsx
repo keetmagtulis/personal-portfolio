@@ -128,12 +128,69 @@ const [selectedId, setSelectedId] = useState(null);
               )}
 
               {selectedId === "experience" && (
-                <div>
-                   <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
-                    <p>
-                    I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
-                    </p>
-                </div>
+               <div >
+               <motion.div
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 transition={{ duration: 1 }}
+                 className="w-full max-w-lg"
+               >
+                 <h2 className="text-gray-800 text-3xl font-bold mb-8">WORK EXPERIENCE</h2>
+                 <div className="relative border-l-2 border-gray-600 pl-6">
+                   {/* Experience 1 */}
+                   <motion.div
+                     className="mb-10"
+                     initial={{ opacity: 0, x: -50 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5, delay: 0.3 }}
+                   >
+                     {/* Dot on the line */}
+                     <div className="absolute w-3 h-3 bg-white rounded-full -left-5 top-1.5"></div>
+                     <p className="text-gray-400">2023-Present</p>
+                     <h3 className="text-white text-lg font-bold mt-1">
+                       JUNIOR TECHNICAL SUPPORT ANALYST
+                     </h3>
+                     <p className="text-gray-400">Philippine EDS Techno-Service, Inc.</p>
+                   </motion.div>
+         
+                   {/* Experience 2 */}
+                   <motion.div
+                     className="mb-10"
+                     initial={{ opacity: 0, x: -50 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5, delay: 0.6 }}
+                   >
+                     {/* Dot on the line */}
+                     <div className="absolute w-3 h-3 bg-white rounded-full -left-5 top-1.5"></div>
+                     <p className="text-gray-400">2022-2023</p>
+                     <h3 className="text-white text-lg font-bold mt-1">
+                       CUSTOMER SERVICE REPRESENTATIVE
+                     </h3>
+                     <p className="text-gray-400">
+                       WNS | Iloilo City, Philippines 5000
+                     </p>
+                   </motion.div>
+         
+                   {/* Experience 3 */}
+                   <motion.div
+                     className="mb-10"
+                     initial={{ opacity: 0, x: -50 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5, delay: 0.9 }}
+                   >
+                     {/* Dot on the line */}
+                     <div className="absolute w-3 h-3 bg-white rounded-full -left-5 top-1.5"></div>
+                     <p className="text-gray-400">2020-2020</p>
+                     <h3 className="text-white text-lg font-bold mt-1">
+                       TECHNICAL SERVICE REPRESENTATIVE
+                     </h3>
+                     <p className="text-gray-400">
+                       Transcom | Iloilo City, Philippines 5000
+                     </p>
+                   </motion.div>
+                 </div>
+               </motion.div>
+             </div>
               )}
  
 
