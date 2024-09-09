@@ -39,7 +39,7 @@ const [selectedId, setSelectedId] = useState(null);
               layoutId="skills"
               className="bg-white rounded-lg shadow-md p-6 mb-5">
               
-              <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">SKILLS</h2>
+              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-red-700 pb-2">SKILLS</h2>
               <p>I am an IT professional with a diverse skill set that includes network administration, Active Directory management, database management, and software development. I excel in maintaining secure and efficient network environments, managing user access and data integrity, and developing software solutions that streamline processes. My expertise allows me to address a wide range of technical challenges and contribute to the smooth operation of any IT infrastructure.</p>
 
               <motion.button 
@@ -58,7 +58,7 @@ const [selectedId, setSelectedId] = useState(null);
               layoutId="experience"
               className="bg-white rounded-lg shadow-md p-6">
               
-              <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
+              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
               <p>I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
               </p>
 
@@ -99,11 +99,13 @@ const [selectedId, setSelectedId] = useState(null);
               
               {selectedId === "aboutme" && (
                 <div>
+                  <img 
+                  src="/images/about-me-background.jpg"
+                  alt="Profile"
+                  className="w-40 h-40 object-cover mb-4 shadow-lg"
+                  />
                   <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">ABOUT ME</h2>
                   <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
-
-                  <p className="text-lg">Additional Text for about me.</p>
-
 
                 </div>
               )} 
@@ -115,9 +117,7 @@ const [selectedId, setSelectedId] = useState(null);
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">
-                  SKILLS
-                </h2>
+               <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">SKILLS</h2>
                 <motion.ul
                   initial="hidden"
                   animate="visible"
@@ -254,6 +254,7 @@ const [selectedId, setSelectedId] = useState(null);
                       JUNIOR TECHNICAL SUPPORT ANALYST
                     </h3>
                     <p className="text-gray-500">Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000</p>
+
                   </motion.div>
 
                   {/* Experience 2 */}
