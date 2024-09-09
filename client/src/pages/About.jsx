@@ -94,21 +94,34 @@ const [selectedId, setSelectedId] = useState(null);
             {/* Expandable Card */}
             <motion.div
               layoutId={selectedId}
-              className="fixed inset-0 bg-white p-10 flex flex-col items-center justify-center rounded-md shadow-lg w-10/12 h-3/4 lg:w-1/2 max-w-xl mx-auto my-auto z-50"
+              className="fixed inset-0 bg-white p-5 flex flex-col items-center justify-center rounded-md shadow-lg w-10/12 h-5/6 lg:w-1/2 max-w-2xl mx-auto my-auto z-50"
             >
-              
-              {selectedId === "aboutme" && (
-                <div>
-                  <img 
-                  src="/images/about-me-background.jpg"
-                  alt="Profile"
-                  className="w-40 h-40 object-cover mb-4 shadow-lg"
+                {selectedId === "aboutme" && (
+                <div className="flex flex-col items-center">
+                  {/* Cover Image */}
+                  <img
+                    src="/images/about-me-background.jpg"
+                    alt="Profile"
+                    className="w-full h-52 object-cover rounded-t-md mb-4"
                   />
-                  <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">ABOUT ME</h2>
-                  <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
 
+                  {/* About Me Content with Scroll */}
+                  <div className="overflow-y-auto max-h-72 p-4 w-full">
+                    <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">
+                      ABOUT ME
+                    </h2>
+                    <p className="text-lg">
+                    My name is Kit, and I’m a guy with a deep curiosity for technology and how things work. I love exploring new innovations, whether it’s the latest software, network configurations, or discovering how different technologies interact. With a background in IT, I have hands-on experience in network administration, database management, Active Directory, and software development, which allows me to tackle a wide range of technical challenges.
+                    </p>
+                    <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
+                    </p>
+                   
+
+                    
+                  </div>
                 </div>
-              )} 
+              )}
+
 
                                 
             {selectedId === "skills" && (
@@ -303,12 +316,11 @@ const [selectedId, setSelectedId] = useState(null);
 
           
 
-              <motion.button
-                className="px-4 py-2 bg-red-700 text-white rounded-md mt-3"
-                onClick={() => setSelectedId(null)}
-              >
-                Close
-              </motion.button>
+            <motion.button
+                
+                className="px-4 py-2 bg-black text-white rounded-md mt-3"
+                onClick={() => setSelectedId(null)}>Close</motion.button>
+            
             </motion.div>
           </>
         )}
