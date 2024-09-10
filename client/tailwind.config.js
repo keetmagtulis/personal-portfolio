@@ -10,6 +10,45 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+
+  theme: {
+    extend: {
+      scrollbar: {
+        DEFAULT: {
+          width: '12px',
+          track: '#f1f1f1',
+          thumb: '#888',
+          thumbHover: '#555',
+        },
+      },
+    },
+  },
+
+  plugins: [ 
+    function({ addUtilities, theme }) {
+      const scrollbars = theme('scrollbar');
+      const scrollbarUtilities = Object.keys(scrollbars).map(key => {
+        const { width, track, thumb, thumbHover } = scrollbars[key];
+        return {
+          [`.scrollbar-${key}`]: {
+            '&::-webkit-scrollbar': {
+              width: width,
+            },
+            '&::-webkit-scrollbar-track': {
+              background: track,
+            },
+            '&::-webkit-scrollbar-thumb': {
+              background: thumb,
+              borderRadius: '8px',
+            },
+            '&::-webkit-scrollbar-thumb:hover': {
+              background: thumbHover,
+            },
+          },
+        };
+      });
+      addUtilities(scrollbarUtilities, ['responsive']);
+    },
+  ],
 }
 

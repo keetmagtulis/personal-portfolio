@@ -6,6 +6,8 @@ import {motion, AnimatePresence} from 'framer-motion';
 
 const About= () => {
 
+
+  
 const [selectedId, setSelectedId] = useState(null);
 
     return (
@@ -19,8 +21,13 @@ const [selectedId, setSelectedId] = useState(null);
               layoutId="aboutme"
               className="bg-white rounded-lg shadow-md p-6">
                 
-                <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">ABOUT ME</h2>
-                <p className="text-lg">My name is Kit, and I'm a guy with a deep curiosity for technology and how things work. I love exploring new innovations and constantly learning about the latest trends. Outside of tech, I enjoy going out, playing games, strumming on my guitar, and diving into good books. Whether it’s understanding the latest gadget or simply enjoying my hobbies, I’m always eager to explore and learn something new.</p>
+                <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-neutral-300 pb-2 drop-shadow-lg">ABOUT ME</h2>
+                <p className="text-lg">
+                    My name is Kit, and I’m a guy with a deep curiosity for technology and how things work. I love exploring new innovations, whether it’s the latest software, network configurations, or discovering how different technologies interact. With a background in IT, I have hands-on experience in network administration, database management, Active Directory, and software development, which allows me to tackle a wide range of technical challenges.
+                    </p>
+                    <br></br>
+                    <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
+                    </p>
 
                 <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -39,7 +46,7 @@ const [selectedId, setSelectedId] = useState(null);
               layoutId="skills"
               className="bg-white rounded-lg shadow-md p-6 mb-5">
               
-              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-red-700 pb-2">SKILLS</h2>
+              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">SKILLS</h2>
               <p>I am an IT professional with a diverse skill set that includes network administration, Active Directory management, database management, and software development. I excel in maintaining secure and efficient network environments, managing user access and data integrity, and developing software solutions that streamline processes. My expertise allows me to address a wide range of technical challenges and contribute to the smooth operation of any IT infrastructure.</p>
 
               <motion.button 
@@ -58,7 +65,7 @@ const [selectedId, setSelectedId] = useState(null);
               layoutId="experience"
               className="bg-white rounded-lg shadow-md p-6">
               
-              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
+              <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">WORK EXPERIENCE</h2>
               <p>I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
               </p>
 
@@ -242,15 +249,19 @@ const [selectedId, setSelectedId] = useState(null);
             )}
 
           {selectedId === "experience" && (
-            <div>
+            <div className="w-full max-w-lg">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="w-full max-w-lg"
+                className="w-full"
               >
-                <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">WORK EXPERIENCE</h2>
-                <div className="relative border-l-2 border-gray-600 pl-6">
+                <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">
+                  WORK EXPERIENCE
+                </h2>
+
+                {/* Scrollable Container */}
+                <div className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-[300px] overflow-y-auto pr-2">
                   {/* Experience 1 */}
                   <motion.div
                     className="mb-10 relative"
@@ -266,8 +277,11 @@ const [selectedId, setSelectedId] = useState(null);
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       JUNIOR TECHNICAL SUPPORT ANALYST
                     </h3>
-                    <p className="text-gray-500">Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000</p>
-
+                    <p className="text-gray-500">
+                      Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000
+                    </p>
+                    <br></br>
+                    <p>My responsibilities are to configure  and  maintain  network  systems,  monitor  performance,  andtroubleshoot issues. I implement network security measures and manage useraccounts  and  group  policies  in  Active  Directory.  Additionally,  I  providetechnical  support,  resolve  hardware  and  software  issues,  perform  systemmaintenance, and assist with software updates</p>
                   </motion.div>
 
                   {/* Experience 2 */}
@@ -285,9 +299,7 @@ const [selectedId, setSelectedId] = useState(null);
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       CUSTOMER SERVICE REPRESENTATIVE
                     </h3>
-                    <p className="text-gray-500">
-                      WNS | Iloilo City, Philippines 5000
-                    </p>
+                    <p className="text-gray-500">WNS | Iloilo City, Philippines 5000</p>
                   </motion.div>
 
                   {/* Experience 3 */}
@@ -305,21 +317,30 @@ const [selectedId, setSelectedId] = useState(null);
                     <h3 className="text-gray-800 text-lg font-bold mt-1">
                       TECHNICAL SERVICE REPRESENTATIVE
                     </h3>
-                    <p className="text-gray-500">
-                      Transcom | Iloilo City, Philippines 5000
-                    </p>
+                    <p className="text-gray-500">Transcom | Iloilo City, Philippines 5000</p>
                   </motion.div>
                 </div>
               </motion.div>
             </div>
           )}
 
-          
 
             <motion.button
                 
                 className="px-4 py-2 bg-black text-white rounded-md mt-3"
                 onClick={() => setSelectedId(null)}>Close</motion.button>
+
+            {/* Close button */}
+          {/*             
+            <motion.button
+                onClick={() => setSelectedId(null)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                className="absolute top-5 right-5 bg-red-700 text-white rounded-full p-2 shadow-md z-50"
+              >
+                ✕
+              </motion.button> */}
             
             </motion.div>
           </>
