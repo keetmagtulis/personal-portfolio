@@ -20,6 +20,13 @@ const [selectedId, setSelectedId] = useState(null);
             <motion.div 
               layoutId="aboutme"
               className="bg-white rounded-lg shadow-md p-6">
+
+                  {/* Cover Image */}
+                  <img
+                    src="/images/about-me-background.jpg"
+                    alt="Profile"
+                    className="w-full h-52 object-cover rounded-t-md mb-4"
+                  />
                 
                 <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-neutral-300 pb-2 drop-shadow-lg">ABOUT ME</h2>
                 <p className="text-lg">
@@ -54,7 +61,7 @@ const [selectedId, setSelectedId] = useState(null);
                   whileTap={{scale: 0.8}}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => setSelectedId("skills")}
-                  className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
+                  className="bg-neutral-900 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
                   See More
                 </motion.button>
 
@@ -74,7 +81,7 @@ const [selectedId, setSelectedId] = useState(null);
                   whileTap={{scale: 0.8}}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => setSelectedId("experience")}
-                  className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
+                  className="bg-neutral-900 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
                   See More
                 </motion.button>
 
@@ -105,15 +112,14 @@ const [selectedId, setSelectedId] = useState(null);
             >
                 {selectedId === "aboutme" && (
                 <div className="flex flex-col items-center">
-                  {/* Cover Image */}
-                  <img
-                    src="/images/about-me-background.jpg"
-                    alt="Profile"
-                    className="w-full h-52 object-cover rounded-t-md mb-4"
-                  />
+                  
+             
 
                   {/* About Me Content with Scroll */}
-                  <div className="overflow-y-auto max-h-72 p-4 w-full">
+                  <div className="scrollbar-DEFAULT overflow-y-auto max-h-96 p-4 w-full">
+                  
+                  
+
                     <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">
                       ABOUT ME
                     </h2>
@@ -137,6 +143,9 @@ const [selectedId, setSelectedId] = useState(null);
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
+              
+            
+
                <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">SKILLS</h2>
                 <motion.ul
                   initial="hidden"
@@ -249,79 +258,86 @@ const [selectedId, setSelectedId] = useState(null);
             )}
 
           {selectedId === "experience" && (
-            <div className="w-full max-w-lg">
+          <div className="w-full max-w-lg">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="w-full"
+          >
+        
+            <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">
+              WORK EXPERIENCE
+            </h2>
+        
+            {/* Scrollable Container */}
+            <div className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
+              {/* Experience 1 */}
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="w-full"
+                className="mb-10 relative"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">
-                  WORK EXPERIENCE
-                </h2>
-
-                {/* Scrollable Container */}
-                <div className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-[300px] overflow-y-auto pr-2">
-                  {/* Experience 1 */}
-                  <motion.div
-                    className="mb-10 relative"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                  >
-                    {/* Dot on the line */}
-                    <div className="absolute -left-6 top-1.5">
-                      <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                    </div>
-                    <p className="text-gray-600">2023-Present</p>
-                    <h3 className="text-gray-800 text-lg font-bold mt-1">
-                      JUNIOR TECHNICAL SUPPORT ANALYST
-                    </h3>
-                    <p className="text-gray-500">
-                      Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000
-                    </p>
-                    <br></br>
-                    <p>My responsibilities are to configure  and  maintain  network  systems,  monitor  performance,  andtroubleshoot issues. I implement network security measures and manage useraccounts  and  group  policies  in  Active  Directory.  Additionally,  I  providetechnical  support,  resolve  hardware  and  software  issues,  perform  systemmaintenance, and assist with software updates</p>
-                  </motion.div>
-
-                  {/* Experience 2 */}
-                  <motion.div
-                    className="mb-10 relative"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                  >
-                    {/* Dot on the line */}
-                    <div className="absolute -left-6 top-1.5">
-                      <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                    </div>
-                    <p className="text-gray-600">2022-2023</p>
-                    <h3 className="text-gray-800 text-lg font-bold mt-1">
-                      CUSTOMER SERVICE REPRESENTATIVE
-                    </h3>
-                    <p className="text-gray-500">WNS | Iloilo City, Philippines 5000</p>
-                  </motion.div>
-
-                  {/* Experience 3 */}
-                  <motion.div
-                    className="mb-10 relative"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.9 }}
-                  >
-                    {/* Dot on the line */}
-                    <div className="absolute -left-6 top-1.5">
-                      <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                    </div>
-                    <p className="text-gray-600">2020-2020</p>
-                    <h3 className="text-gray-800 text-lg font-bold mt-1">
-                      TECHNICAL SERVICE REPRESENTATIVE
-                    </h3>
-                    <p className="text-gray-500">Transcom | Iloilo City, Philippines 5000</p>
-                  </motion.div>
+                {/* Dot on the line */}
+                <div className="absolute -left-6 top-1.5">
+                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
                 </div>
+                <p className="text-gray-800 font-semibold">2023-Present</p>
+                <h3 className="text-gray-800 text-lg font-bold mt-1">
+                  JUNIOR TECHNICAL SUPPORT ANALYST
+                </h3>
+                <p className="text-gray-500 mt-2"> 
+                  Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000
+                </p>
+                <p className="mt-2"> 
+                  My responsibilities are to configure and maintain network systems, monitor performance, and troubleshoot issues. I implement network security measures and manage user accounts and group policies in Active Directory. Additionally, I provide technical support, resolve hardware and software issues, perform system maintenance, and assist with software updates.
+                </p>
+              </motion.div>
+        
+              {/* Experience 2 */}
+              <motion.div
+                className="mb-10 relative"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                {/* Dot on the line */}
+                <div className="absolute -left-6 top-1.5">
+                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
+                </div>
+                <p className="text-gray-600">2022-2023</p>
+                <h3 className="text-gray-800 text-lg font-bold mt-1">
+                  CUSTOMER SERVICE REPRESENTATIVE
+                </h3>
+                <p className="text-gray-500 mt-2"> WNS | Iloilo City, Philippines 5000 </p>
+                <br></br>
+                <p>As  a  Customer  Service  Representative  for  a  travel  account,  I  assistcustomers  with  booking  flights,  hotels,  and  vacation  packages.  I  handleinquiries related to travel itineraries, cancellations, and changes. I providesupport  for  travel-related  issues,  including  baggage  concerns  andaccommodation problems</p>
+              </motion.div>
+        
+              {/* Experience 3 */}
+              <motion.div
+                className="mb-10 relative"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+              >
+                {/* Dot on the line */}
+                <div className="absolute -left-6 top-1.5">
+                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
+                </div>
+                <p className="text-gray-600">2020-2020</p>
+                <h3 className="text-gray-800 text-lg font-bold mt-1">
+                  TECHNICAL SERVICE REPRESENTATIVE
+                </h3>
+                <p className="text-gray-500 mt-2"> Transcom | Iloilo City, Philippines 5000 </p>
+                <br></br>
+                <p>I  handle  technical  support  and  billing  inquiries.  I  assist  customers  withtroubleshooting  issues  related  to  internet,  cable,  and  phone  services.  Iaddress  and  resolve  technical  problems,  including  connectivity  andequipment  malfunctions.  Additionally,  I  manage  billing  inquiries,  processpayments, and address discrepancies</p>
               </motion.div>
             </div>
+          </motion.div>
+        </div>
+        
           )}
 
 

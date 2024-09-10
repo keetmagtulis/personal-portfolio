@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       scrollbar: {
         DEFAULT: {
-          width: '12px',
+          width: '10px',
           track: '#f1f1f1',
           thumb: '#888',
           thumbHover: '#555',
