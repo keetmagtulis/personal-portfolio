@@ -19,8 +19,12 @@ const [selectedId, setSelectedId] = useState(null);
       
             <motion.div 
               layoutId="aboutme"
-              className="bg-white rounded-lg shadow-md p-6">
-
+                  whileHover={{ scale: 1.02}}
+                  whileTap={{scale: 0.8}}
+                  transition={{ type: "delay"}}
+                  onClick={() => setSelectedId("aboutme")}
+              className="bg-white rounded-lg shadow-md p-6 cursor-pointer">
+              
                   {/* Cover Image */}
                   <img
                     src="/images/about-me-background.jpg"
@@ -36,14 +40,14 @@ const [selectedId, setSelectedId] = useState(null);
                     <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
                     </p>
 
-                <motion.button 
+                {/* <motion.button 
                   whileHover={{ scale: 1.1}}
                   whileTap={{scale: 0.8}}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => setSelectedId("aboutme")}
                   className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
                   See More
-                </motion.button>
+                </motion.button> */}
 
             </motion.div>
           
@@ -51,7 +55,11 @@ const [selectedId, setSelectedId] = useState(null);
 
             <motion.div 
               layoutId="skills"
-              className="bg-white rounded-lg shadow-md p-6 mb-5">
+              whileHover={{ scale: 1.02}}
+              whileTap={{scale: 0.8}}
+              transition={{ type: "delay"}}
+              onClick={() => setSelectedId("skills")}
+              className="bg-white rounded-lg shadow-md p-6 mb-5 cursor-pointer">
               
               <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">SKILLS</h2>
               <p>I am an IT professional with a diverse skill set that includes network administration, Active Directory management, database management, and software development. I excel in maintaining secure and efficient network environments, managing user access and data integrity, and developing software solutions that streamline processes. My expertise allows me to address a wide range of technical challenges and contribute to the smooth operation of any IT infrastructure.</p>
@@ -70,7 +78,11 @@ const [selectedId, setSelectedId] = useState(null);
             
             <motion.div
               layoutId="experience"
-              className="bg-white rounded-lg shadow-md p-6">
+              whileHover={{ scale: 1.02}}
+              whileTap={{scale: 0.8}}
+              transition={{ type: "delay"}}
+              onClick={() => setSelectedId("experience")}
+              className="bg-white rounded-lg shadow-md p-6 cursor-pointer">
               
               <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">WORK EXPERIENCE</h2>
               <p>I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
