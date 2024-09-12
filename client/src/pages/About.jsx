@@ -12,6 +12,7 @@ const scrollRef = useRef(null);
 
 const expScrollContainer = useRef(null);
 const { scrollYProgress} = useScroll( {  
+  
   target: expScrollContainer,
   offset: ["start end", "end start"],
   layoutEffect: false,
