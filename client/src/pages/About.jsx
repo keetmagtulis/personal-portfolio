@@ -1,5 +1,5 @@
 import React, { useState, useRef} from "react";
-import {motion, AnimatePresence, useScroll, useTransform} from 'framer-motion';
+import {motion, AnimatePresence, useScroll, useSpring} from 'framer-motion';
 
 
 
@@ -9,19 +9,21 @@ const About= () => {
 const [selectedId, setSelectedId] = useState(null);
 
 const scrollRef = useRef(null);
+
 const expScrollContainer = useRef(null);
-
-const { scrollYProgressExp } = useScroll({
-
-  target: expScrollContainer.current,
+const { scrollYProgress} = useScroll( {  
+  target: expScrollContainer,
   offset: ["start end", "end start"],
+  container: expScrollContainer,
+  layoutEffect: false,
 
 });
 
-
-
-
-console.log(expScrollContainer.current);
+const scaleX = useSpring(scrollYProgress, {
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001
+});
 
 
 
@@ -151,7 +153,7 @@ console.log(expScrollContainer.current);
               layoutId={selectedId}
               className="fixed inset-0 bg-white p-5 flex flex-col items-center justify-center rounded-md shadow-lg w-10/12 h-5/6 lg:w-1/2 max-w-2xl mx-auto my-auto z-50"
             >
-                {selectedId === "aboutme" && (
+            {selectedId === "aboutme" && (
                 <div className="flex flex-col items-center">
                   
              
@@ -174,7 +176,7 @@ console.log(expScrollContainer.current);
                     
                   </div>
                 </div>
-              )}
+            )}
 
 
                                 
@@ -310,19 +312,22 @@ console.log(expScrollContainer.current);
                    
           >
         
-            <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 pb-2">
-              WORK EXPERIENCE
-            </h2>
-            
           
-            <motion.div 
-              className="progress-bar bg-neutral-600 h-1"
-              style={{ scaleX: scrollYProgressExp}}
+            <div className="mb-4">
+            <h2 className="text-gray-800 text-xl font-bold pb-2">
+            WORK EXPERIENCE
+            </h2>
+
+              <motion.div 
+               className="progress-bar bg-neutral-600 h-1"
+               style={{ scaleX }}
               />
+
+              </div>
            
         
             {/* Scrollable Container */}
-            <div ref={expScrollContainer} className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
+            <div ref={expScrollContainer} className="scrollbar-DEFAULT border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
               {/* Experience 1 */}
 
               <motion.div

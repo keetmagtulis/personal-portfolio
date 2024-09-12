@@ -37,7 +37,7 @@ const Home = () => {
                 restDelta: 0.001
               }
             }}
-          className="w-1/3 h-96 rounded-full overflow-hidden border-none">
+          className="w-1/3 h-96 rounded-full overflow-hidden border-none ">
         
           
           <img src="/images/profile_picture.jpg" alt="Profile" className="w-full h-full object-cover" />
