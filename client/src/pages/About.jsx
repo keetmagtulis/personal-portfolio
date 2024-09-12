@@ -1,28 +1,53 @@
-import React, { useState } from "react";
-import {motion, AnimatePresence} from 'framer-motion';
+import React, { useState, useRef} from "react";
+import {motion, AnimatePresence, useScroll, useTransform} from 'framer-motion';
 
 
 
 
 const About= () => {
 
-
-  
 const [selectedId, setSelectedId] = useState(null);
+
+const scrollRef = useRef(null);
+const expScrollContainer = useRef(null);
+
+const { scrollYProgressExp } = useScroll({
+
+  target: expScrollContainer.current,
+  offset: ["start end", "end start"],
+
+});
+
+
+
+
+console.log(expScrollContainer.current);
+
+
 
     return (
 
-    <div className="flex justify-center items-center min-h-auto" id="about">
+    <div 
+    className="flex justify-center items-center min-h-auto" id="about"
+
+    >
         
         <div className="grid gap-6 lg:grid-cols-2 w-4/5 ">
 
       
             <motion.div 
               layoutId="aboutme"
-                  whileHover={{ scale: 1.02}}
-                  whileTap={{scale: 0.8}}
-                  transition={{ type: "delay"}}
-                  onClick={() => setSelectedId("aboutme")}
+              initial= {{ opacity: 0}}
+              whileHover={{ scale: 1.02}}
+              whileTap={{scale: 0.8}}
+              whileInView={{opacity: 1, transition: {
+                delay: 0.3,
+                duration: 1,
+              }}}
+              viewport={{root: scrollRef}}
+              transition={{ type: "delay"}}
+              onClick={() => setSelectedId("aboutme")}
+                  
               className="bg-white rounded-lg shadow-md p-6 cursor-pointer">
               
                   {/* Cover Image */}
@@ -40,14 +65,6 @@ const [selectedId, setSelectedId] = useState(null);
                     <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
                     </p>
 
-                {/* <motion.button 
-                  whileHover={{ scale: 1.1}}
-                  whileTap={{scale: 0.8}}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  onClick={() => setSelectedId("aboutme")}
-                  className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
-                  See More
-                </motion.button> */}
 
             </motion.div>
           
@@ -55,8 +72,14 @@ const [selectedId, setSelectedId] = useState(null);
 
             <motion.div 
               layoutId="skills"
+              initial= {{ opacity: 0}}
               whileHover={{ scale: 1.02}}
               whileTap={{scale: 0.8}}
+              whileInView={{opacity: 1, transition: {
+                  delay: 0.3,
+                  duration: 1,
+              }}}
+              viewport={{root: scrollRef}}
               transition={{ type: "delay"}}
               onClick={() => setSelectedId("skills")}
               className="bg-white rounded-lg shadow-md p-6 mb-5 cursor-pointer">
@@ -78,8 +101,14 @@ const [selectedId, setSelectedId] = useState(null);
             
             <motion.div
               layoutId="experience"
+              initial= {{ opacity: 0}}
               whileHover={{ scale: 1.02}}
               whileTap={{scale: 0.8}}
+              whileInView={{opacity: 1, transition: {
+                delay: 0.3,
+                duration: 1,
+              }}}
+              viewport={{root: scrollRef}}
               transition={{ type: "delay"}}
               onClick={() => setSelectedId("experience")}
               className="bg-white rounded-lg shadow-md p-6 cursor-pointer">
@@ -158,7 +187,9 @@ const [selectedId, setSelectedId] = useState(null);
               
             
 
-               <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 border-red-700 pb-2 drop-shadow-lg">SKILLS</h2>
+               <motion.h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg progress-bar"
+               
+               >SKILLS</motion.h2>
                 <motion.ul
                   initial="hidden"
                   animate="visible"
@@ -270,21 +301,30 @@ const [selectedId, setSelectedId] = useState(null);
             )}
 
           {selectedId === "experience" && (
-          <div className="w-full max-w-lg">
+          <div  className="w-full max-w-lg" >
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full"
+                   
           >
         
-            <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 border-red-700 pb-2">
+            <h2 className="text-gray-800 text-xl font-bold mb-4 border-b-2 pb-2">
               WORK EXPERIENCE
             </h2>
+            
+          
+            <motion.div 
+              className="progress-bar bg-neutral-600 h-1"
+              style={{ scaleX: scrollYProgressExp}}
+              />
+           
         
             {/* Scrollable Container */}
-            <div className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
+            <div ref={expScrollContainer} className="scrollbar-DEFAULT relative border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
               {/* Experience 1 */}
+
               <motion.div
                 className="mb-10 relative"
                 initial={{ opacity: 0, x: -50 }}
@@ -357,18 +397,6 @@ const [selectedId, setSelectedId] = useState(null);
                 
                 className="px-4 py-2 bg-black text-white rounded-md mt-3"
                 onClick={() => setSelectedId(null)}>Close</motion.button>
-
-            {/* Close button */}
-          {/*             
-            <motion.button
-                onClick={() => setSelectedId(null)}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }}
-                className="absolute top-5 right-5 bg-red-700 text-white rounded-full p-2 shadow-md z-50"
-              >
-                ✕
-              </motion.button> */}
             
             </motion.div>
           </>
