@@ -1,5 +1,9 @@
 import React, { useState, useRef } from "react";
 import {motion, AnimatePresence} from 'framer-motion';
+import { FaNetworkWired, FaPython, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa'; // Import specific icons
+import { MdDomain, MdWeb } from 'react-icons/md'; // Import additional icons as needed
+import { SiTailwindcss, SiBootstrap, SiMicrosoft } from 'react-icons/si'; // Import more icons
+
 
 
 
@@ -177,149 +181,85 @@ const scrollRef = useRef(null);
                   </div>
                 </div>
             )}
-
-
                                 
             {selectedId === "skills" && (
+             <div  className="w-full max-w-lg" >
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-              
-            
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="w-full"
+            >
+              <motion.h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg progress-bar">
+                SKILLS
+              </motion.h2>
 
-               <motion.h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg progress-bar"
-               
-               >SKILLS</motion.h2>
-                <motion.ul
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                    },
-                    visible: {
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.1, // Adjust the delay between each item
-                      },
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                  },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.1, // Adjust the delay between each item
                     },
                   }}
-                >
-                  {/* Skill Item */}
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
+                }
+                className="flex flex-wrap gap-4" // Allows boxes to wrap and create a slightly chaotic layout
+              >
+                {/* Array of skills with corresponding icons */}
+                {[
+                  { skill: "NETWORK ADMINISTRATION", icon: <FaNetworkWired /> },
+                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <SiMicrosoft /> },
+                  { skill: "DOMAIN MANAGEMENT", icon: <MdDomain /> },
+                  { skill: "SOFTWARE DEVELOPMENT", icon: <FaPython /> },
+                  { skill: "WEB DEVELOPMENT", icon: <MdWeb /> },
+                  { skill: "REACT JS", icon: <FaReact /> },
+                  { skill: "NODE JS / EXPRESS", icon: <FaNodeJs /> },
+                  { skill: "PYTHON", icon: <FaPython /> },
+                  { skill: "TAILWIND CSS / BOOTSTRAP", icon: <SiTailwindcss /> },
+                  { skill: "SQL", icon: <FaDatabase /> },
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-2 text-gray-800 text-lg mb-2 p-3 bg-gray-100 rounded shadow-lg cursor-pointer"
                     variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
+                      hidden: { opacity: 0, x: Math.random() * 40 - 20, y: Math.random() * 40 - 20 },
+                      visible: { opacity: 1, x: 0, y: 0, rotate: Math.random() * 10 - 5 },
+                    }}
+                    whileHover={{ scale: 1.05, rotate: Math.random() * 6 - 3 }}
+                    transition={{ type: "spring", stiffness: 100 }}
+                    style={{
+                      minWidth: `${Math.random() * 80 + 80}px`, // Random width for each box
+                      transform: `rotate(${Math.random() * 4 - 2}deg)`, // Random initial rotation
                     }}
                   >
-                    NETWORK ADMINISTRATION
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    ACTIVE DIRECTORY MANAGEMENT
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    DOMAIN MANAGEMENT
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    SOFTWARE DEVELOPMENT
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    WEB DEVELOPMENT
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    REACT JS
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    NODE JS / EXPRESS
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    PYTHON
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    TAILWIND CSS / BOOTSTRAP
-                  </motion.li>
-                  <motion.li
-                    className="text-gray-800 text-lg mb-2"
-                    variants={{
-                      hidden: { opacity: 0, x: -20 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                  >
-                    SQL
-                  </motion.li>
-                </motion.ul>
+                    <span className="text-xl">{item.icon}</span> {/* Display icon */}
+                    {item.skill}
+                  </motion.div>
+                ))}
               </motion.div>
-            )}
+            </motion.div>
 
+          </div>
+       
+          )}
 
-          {selectedId === "experience" && (
-          <div  className="w-full max-w-lg" >
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="w-full"
-                   
-          >
-        
+            {selectedId === "experience" && (
+            <div  className="w-full max-w-lg" >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="w-full"
+                    
+            >
           
-            <div className="mb-4">
-            <h2 className="text-gray-800 text-xl font-bold pb-2">
-            WORK EXPERIENCE
-            </h2>
-
-              </div>
+          
+            <h2 className="text-gray-800 text-xl font-bold pb-2">WORK EXPERIENCE</h2>
            
         
             {/* Scrollable Container */}
@@ -391,7 +331,7 @@ const scrollRef = useRef(null);
           </motion.div>
         </div>
         
-          )}
+            )}
 
 
             <motion.button
