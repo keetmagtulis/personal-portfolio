@@ -1,5 +1,5 @@
-import React, { useState, useRef} from "react";
-import {motion, AnimatePresence, useScroll, useSpring} from 'framer-motion';
+import React, { useState, useRef } from "react";
+import {motion, AnimatePresence} from 'framer-motion';
 
 
 
@@ -9,24 +9,6 @@ const About= () => {
 const [selectedId, setSelectedId] = useState(null);
 
 const scrollRef = useRef(null);
-
-const expScrollContainer = useRef(null);
-const { scrollYProgress} = useScroll( {  
-  
-  target: expScrollContainer,
-  offset: ["start end", "end start"],
-  layoutEffect: false,
-  container: expScrollContainer,
-  
-  
-
-});
-
-const scaleX = useSpring(scrollYProgress, {
-  stiffness: 100,
-  damping: 30,
-  restDelta: 0.001
-});
 
 
 
@@ -57,7 +39,7 @@ const scaleX = useSpring(scrollYProgress, {
               
                   {/* Cover Image */}
                   <img
-                    src="/images/about-me-background.jpg"
+                    src="/images/about-me-background2.jpg"
                     alt="Profile"
                     className="w-full h-52 object-cover rounded-t-md mb-4"
                   />
@@ -88,9 +70,17 @@ const scaleX = useSpring(scrollYProgress, {
               transition={{ type: "delay"}}
               onClick={() => setSelectedId("skills")}
               className="bg-white rounded-lg shadow-md p-6 mb-5 cursor-pointer">
+
+                {/* Cover Image */}
+                <img
+                    src="/images/skills-background.jpg"
+                    alt="skills"
+                    className="w-full h-52 object-cover rounded-t-md mb-4"
+                  />
+                
               
               <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">SKILLS</h2>
-              <p>I am an IT professional with a diverse skill set that includes network administration, Active Directory management, database management, and software development. I excel in maintaining secure and efficient network environments, managing user access and data integrity, and developing software solutions that streamline processes. My expertise allows me to address a wide range of technical challenges and contribute to the smooth operation of any IT infrastructure.</p>
+              <p>I am an IT professional with a diverse skill set that includes network administration, active directory management, database management, and software development.</p>
 
               <motion.button 
                   whileHover={{ scale: 1.1}}
@@ -117,9 +107,16 @@ const scaleX = useSpring(scrollYProgress, {
               transition={{ type: "delay"}}
               onClick={() => setSelectedId("experience")}
               className="bg-white rounded-lg shadow-md p-6 cursor-pointer">
-              
+
+              {/* Cover Image */}
+              <img
+              src="/images/work-exp-background.jpg"
+              alt="error"
+              className="w-full h-52 object-cover rounded-t-md mb-4"
+                  />
+                            
               <h2 className="text-gray-800 text-2xl font-bold mb-4 border-b-2 border-neutral-300 pb-2">WORK EXPERIENCE</h2>
-              <p>I have diverse experience in IT and customer service, specializing in network administration, Active Directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development. In customer service, I handled technical support and billing for a telecom company, enhancing my problem-solving abilities and service skills.
+              <p>I have diverse experience in IT and customer service, specializing in network administration, active directory management, and technical support. My roles have involved managing network systems, user accounts, and providing tech support. I also have skills in database management and software development.
               </p>
 
               <motion.button 
@@ -305,6 +302,7 @@ const scaleX = useSpring(scrollYProgress, {
               </motion.div>
             )}
 
+
           {selectedId === "experience" && (
           <div  className="w-full max-w-lg" >
           <motion.div
@@ -321,16 +319,11 @@ const scaleX = useSpring(scrollYProgress, {
             WORK EXPERIENCE
             </h2>
 
-              <motion.div 
-               className="progress-bar bg-neutral-600 h-1"
-               style={{ scaleX }}
-              />
-
               </div>
            
         
             {/* Scrollable Container */}
-            <div ref={expScrollContainer} className="scrollbar-DEFAULT border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
+            <div className="scrollbar-DEFAULT border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
               {/* Experience 1 */}
 
               <motion.div
