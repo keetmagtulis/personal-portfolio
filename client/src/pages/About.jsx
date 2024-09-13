@@ -67,7 +67,7 @@ const scrollRef = useRef(null);
               whileHover={{ scale: 1.02}}
               whileTap={{scale: 0.8}}
               whileInView={{opacity: 1, transition: {
-                  delay: 0.3,
+                  delay: 0.5,
                   duration: 1,
               }}}
               viewport={{root: scrollRef}}
@@ -190,7 +190,7 @@ const scrollRef = useRef(null);
               transition={{ duration: 0.5 }}
               className="w-full"
             >
-              <motion.h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg progress-bar">
+              <motion.h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg">
                 SKILLS
               </motion.h2>
 
@@ -213,31 +213,33 @@ const scrollRef = useRef(null);
                 {/* Array of skills with corresponding icons */}
                 {[
                   { skill: "NETWORK ADMINISTRATION", icon: <FaNetworkWired /> },
-                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <SiMicrosoft /> },
+                  { skill: "PYTHON", icon: <FaPython /> },
                   { skill: "DOMAIN MANAGEMENT", icon: <MdDomain /> },
+                  { skill: "SQL", icon: <FaDatabase /> },
                   { skill: "SOFTWARE DEVELOPMENT", icon: <FaPython /> },
                   { skill: "WEB DEVELOPMENT", icon: <MdWeb /> },
-                  { skill: "REACT JS", icon: <FaReact /> },
-                  { skill: "NODE JS / EXPRESS", icon: <FaNodeJs /> },
-                  { skill: "PYTHON", icon: <FaPython /> },
-                  { skill: "TAILWIND CSS / BOOTSTRAP", icon: <SiTailwindcss /> },
-                  { skill: "SQL", icon: <FaDatabase /> },
+                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <SiMicrosoft /> },
+                  { skill: "REACT", icon: <FaReact /> },
+                  { skill: "NODE / EXPRESS", icon: <FaNodeJs /> },
+                  { skill: "TAILWIND", icon: <SiTailwindcss /> },
+
+                  { skill: "BOOTSTRAP", icon: <SiBootstrap /> },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
                     className="flex items-center gap-2 text-gray-800 text-lg mb-2 p-3 bg-gray-100 rounded shadow-lg cursor-pointer"
                     variants={{
                       hidden: { opacity: 0, x: Math.random() * 40 - 20, y: Math.random() * 40 - 20 },
-                      visible: { opacity: 1, x: 0, y: 0, rotate: Math.random() * 10 - 5 },
+                      visible: { opacity: 1, x: 0, y: 0},
                     }}
                     whileHover={{ scale: 1.05, rotate: Math.random() * 6 - 3 }}
-                    transition={{ type: "spring", stiffness: 100 }}
+                    transition={{ type: "spring", stiffness: 200 }}
                     style={{
-                      minWidth: `${Math.random() * 80 + 80}px`, // Random width for each box
-                      transform: `rotate(${Math.random() * 4 - 2}deg)`, // Random initial rotation
+                      transform: `rotate(${Math.random() * 4 - 2}deg)`, 
                     }}
                   >
-                    <span className="text-xl">{item.icon}</span> {/* Display icon */}
+                    <span className="text-xl">{item.icon}</span> 
+                    {/* Display icon */}
                     {item.skill}
                   </motion.div>
                 ))}
@@ -259,7 +261,7 @@ const scrollRef = useRef(null);
             >
           
           
-            <h2 className="text-gray-800 text-xl font-bold pb-2">WORK EXPERIENCE</h2>
+            <h2 className="text-gray-800 text-4xl font-semibold mb-4 border-b-2 pb-2 drop-shadow-lg">WORK EXPERIENCE</h2>
            
         
             {/* Scrollable Container */}
