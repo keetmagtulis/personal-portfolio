@@ -14,11 +14,11 @@ module.exports = {
   theme: {
     extend: {
       scrollbar: {
-        DEFAULT: {
+        default: {
           width: '7px',
-          track: '#f1f1f1',
-          thumb: '#888',
-          thumbHover: '#555',
+          track: 'transparent',
+          thumb: 'transparent',
+          thumbHover: 'transparent',
         },
       },
     },

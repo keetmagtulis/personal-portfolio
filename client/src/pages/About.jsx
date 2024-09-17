@@ -15,7 +15,6 @@ const [selectedId, setSelectedId] = useState(null);
 const scrollRef = useRef(null);
 
 
-
     return (
 
     <div 
@@ -91,7 +90,7 @@ const scrollRef = useRef(null);
                   whileTap={{scale: 0.8}}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => setSelectedId("skills")}
-                  className="bg-neutral-900 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
+                  className="bg-neutral-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
                   See More
                 </motion.button>
 
@@ -128,7 +127,7 @@ const scrollRef = useRef(null);
                   whileTap={{scale: 0.8}}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   onClick={() => setSelectedId("experience")}
-                  className="bg-neutral-900 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
+                  className="bg-neutral-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" >
                   See More
                 </motion.button>
 
@@ -155,7 +154,7 @@ const scrollRef = useRef(null);
             {/* Expandable Card */}
             <motion.div
               layoutId={selectedId}
-              className="fixed inset-0 bg-white p-5 flex flex-col items-center justify-center rounded-md shadow-lg w-10/12 h-5/6 lg:w-1/2 max-w-2xl mx-auto my-auto z-50"
+              className="fixed inset-0 bg-white p-5 flex flex-col items-center justify-center rounded-md shadow-lg w-10/12 h-5/6 lg:w-1/2 max-w-2xl mx-auto my-auto z-50 "
             >
             {selectedId === "aboutme" && (
                 <div className="flex flex-col items-center">
@@ -248,7 +247,7 @@ const scrollRef = useRef(null);
 
           </div>
        
-          )}
+            )}
 
             {selectedId === "experience" && (
             <div  className="w-full max-w-lg" >
@@ -265,19 +264,16 @@ const scrollRef = useRef(null);
            
         
             {/* Scrollable Container */}
-            <div className="scrollbar-DEFAULT border-l-2 border-gray-600 pl-6 max-h-96 overflow-y-auto pr-2">
-              {/* Experience 1 */}
+            <div className="scrollbar-default max-h-96 max-w-full overflow-y-auto px-3">
 
+              {/* Experience 1 */}
               <motion.div
-                className="mb-10 relative"
+                className="mb-12 relative"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                {/* Dot on the line */}
-                <div className="absolute -left-6 top-1.5">
-                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                </div>
+
                 <p className="text-gray-800 font-semibold">2023-Present</p>
                 <h3 className="text-gray-800 text-lg font-bold mt-1">
                   JUNIOR TECHNICAL SUPPORT ANALYST
@@ -297,10 +293,7 @@ const scrollRef = useRef(null);
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                {/* Dot on the line */}
-                <div className="absolute -left-6 top-1.5">
-                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                </div>
+
                 <p className="text-gray-600">2022-2023</p>
                 <h3 className="text-gray-800 text-lg font-bold mt-1">
                   CUSTOMER SERVICE REPRESENTATIVE
@@ -317,10 +310,7 @@ const scrollRef = useRef(null);
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
-                {/* Dot on the line */}
-                <div className="absolute -left-6 top-1.5">
-                  <div className="w-3 h-3 bg-white rounded-full border-2 border-gray-600"></div>
-                </div>
+
                 <p className="text-gray-600">2020-2020</p>
                 <h3 className="text-gray-800 text-lg font-bold mt-1">
                   TECHNICAL SERVICE REPRESENTATIVE
@@ -329,6 +319,7 @@ const scrollRef = useRef(null);
                 <br></br>
                 <p>I  handle  technical  support  and  billing  inquiries.  I  assist  customers  withtroubleshooting  issues  related  to  internet,  cable,  and  phone  services.  Iaddress  and  resolve  technical  problems,  including  connectivity  andequipment  malfunctions.  Additionally,  I  manage  billing  inquiries,  processpayments, and address discrepancies</p>
               </motion.div>
+            
             </div>
           </motion.div>
         </div>
