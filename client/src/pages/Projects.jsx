@@ -11,16 +11,16 @@ const Projects = () => {
              style={{ gridTemplateRows: '600px 600px 600px' }}> {/* Fixed height for each row */}
           
           {/* Project 1 */}
-          <motion.div className="bg-neutral-800 rounded-lg shadow-md p-6 h-full">
+          <motion.div className="bg-neutral-100 rounded-lg shadow-md p-6 h-full">
             <img
-            src="/images/skills-background.jpg"
+            src="/images/about-me-background.jpg"
             alt="Profile"
             className="w-full h-60 object-cover rounded-lg mb-4"
             />
-            <h2 className="text-neutral-300 text-2xl font-semibold  mb-4 pb-2 drop-shadow-lg">
-            PROJECT NAME
+            <h2 className="text-gray-800 text-2xl font-semibold  mb-4 pb-2 drop-shadow-lg">
+            SERVICE DESK CHATBOT
             </h2>
-            <p className="text-lg text-neutral-300 w-1/2">
+            <p className="text-lg  w-1/2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae saepe nostrum quidem beatae minima unde exercitationem, aliquam maxime eaque sit maiores impedit, molestiae consequuntur, deserunt praesentium voluptatem itaque nulla.
             </p>
 
