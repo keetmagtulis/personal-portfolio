@@ -8,8 +8,8 @@ const Projects = () => {
       <div className="flex justify-center items-center min-h-screen" id="projects">
     
         {/* Grid with fixed size items */}
-        <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1 w-3/4" 
-             style={{ gridTemplateRows: '700px 700px 700px' }}> {/* Fixed height for each row */}
+        <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1" 
+             style={{ gridTemplateRows: '600px 600px 600px', width: '86%' }}> {/* Fixed height for each row */}
           
           {/* Project 1 */}
           <motion.div className="bg-neutral-100 rounded-lg shadow-md p-6 h-full">
