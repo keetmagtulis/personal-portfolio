@@ -1,10 +1,65 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import '../styles/index.css';
 
 const NavBar = () => {
+
+  const [isVisible, setIsVisible] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    let timeoutId;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Always show the div when the user is at the top of the page
+      if (scrollTop === 0) {
+        setIsVisible(true);
+        clearTimeout(timeoutId);
+        return;
+      }
+
+      // Show the div when the user scrolls
+      setIsVisible(true);
+
+      // Hide the div after 2 seconds of no scrolling if not hovered
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        if (!isHovered) {
+          setIsVisible(false);
+        }
+      }, 2000);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup scroll event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, [isHovered]);
+
+  const handleMouseEnter = () => {
+    setIsVisible(true);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+
+    // Hide the div again after a delay when hover is removed
+    setTimeout(() => {
+      if (!isHovered) {
+        setIsVisible(false);
+      }
+    }, 2000);
+  };
+
   return (
 
     <motion.nav
@@ -15,14 +70,20 @@ const NavBar = () => {
       id="home"
     >
       {/* Centered Navigation Links */}
-      <div className="fixed left-1/2 transform -translate-x-1/2 flex space-x-3 bg-neutral-100  shadow-lg  rounded-full p-3 z-40 ">
+      <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`fixed left-1/2 transform -translate-x-1/2 flex space-x-4 bg-neutral-200 shadow-lg rounded-full p-3 z-40  transition-opacity duration-500 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+      >
         <Link
           to="home"
           spy={true}
           smooth={true}
           offset={0}
           duration={500}
-          className="cursor-pointer text-neutral-700 px-2 py-2 rounded-md text-s font-normal"
+          className="cursor-pointer text-neutral-700 px-2 py-2 rounded-md text-s font-semibold"
         >
           <motion.div
             whileHover={{ scale: 1.05}}
@@ -38,7 +99,7 @@ const NavBar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="cursor-pointer text-neutral-700 px-2 py-2 rounded-md text-s font-normal"
+          className="cursor-pointer text-neutral-700 px-2 py-2 rounded-md text-s font-semibold"
         >
           <motion.div
             whileHover={{ scale: 1.05}}
@@ -54,7 +115,7 @@ const NavBar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="cursor-pointer text-neutral-700  px-2 py-2 rounded-md text-s font-normal"
+          className="cursor-pointer text-neutral-700  px-2 py-2 rounded-md text-s font-semibold"
         >
 
           <motion.div
@@ -67,7 +128,7 @@ const NavBar = () => {
         </Link>
         <RouterLink
           to="/socials"
-          className="text-neutral-700  px-2 py-2 rounded-md text-s font-normal"
+          className="text-neutral-700  px-2 py-2 rounded-md text-s font-semibold"
         >
           <motion.div
             whileHover={{ scale: 1.05}}
