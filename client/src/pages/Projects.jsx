@@ -1,5 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
+import { FaPython, } from 'react-icons/fa';
 
 const Projects = () => {
 
@@ -7,7 +8,7 @@ const Projects = () => {
       <div className="flex justify-center items-center min-h-screen" id="projects">
     
         {/* Grid with fixed size items */}
-        <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1 w-11/12" 
+        <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1 w-3/4" 
              style={{ gridTemplateRows: '600px 600px 600px' }}> {/* Fixed height for each row */}
           
           {/* Project 1 */}
@@ -21,10 +22,9 @@ const Projects = () => {
             SERVICE DESK CHATBOT
             </h2>
             <p className="text-lg  w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae saepe nostrum quidem beatae minima unde exercitationem, aliquam maxime eaque sit maiores impedit, molestiae consequuntur, deserunt praesentium voluptatem itaque nulla.
+            This Service desk Chat-Bot enhances the Intranet Website by providing users with quick answers to frequently asked questions (FAQs) and basic support. Built using the Rasa framework, this Chat-Bot is designed to streamline user interactions and provide efficient support.
             </p>
-
-     
+            <span className="text-xl"><FaPython /></span> 
 
             <motion.button 
               whileHover={{ scale: 1.1 }}
