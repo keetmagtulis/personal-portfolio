@@ -31,7 +31,7 @@ const NavBar = () => {
         if (!isHovered) {
           setIsVisible(false);
         }
-      }, 2000);
+      }, 1500);
     };
 
     // Add scroll event listener

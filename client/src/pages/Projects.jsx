@@ -9,7 +9,7 @@ const Projects = () => {
     
         {/* Grid with fixed size items */}
         <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1 w-3/4" 
-             style={{ gridTemplateRows: '600px 600px 600px' }}> {/* Fixed height for each row */}
+             style={{ gridTemplateRows: '700px 700px 700px' }}> {/* Fixed height for each row */}
           
           {/* Project 1 */}
           <motion.div className="bg-neutral-100 rounded-lg shadow-md p-6 h-full">
@@ -24,15 +24,23 @@ const Projects = () => {
             <p className="text-lg  w-1/2">
             This Service desk Chat-Bot enhances the Intranet Website by providing users with quick answers to frequently asked questions (FAQs) and basic support. Built using the Rasa framework, this Chat-Bot is designed to streamline user interactions and provide efficient support.
             </p>
-            <span className="text-xl"><FaPython /></span> 
+            
+            <motion.div        
+                    className="flex items-center gap-2 text-gray-800 mt-2 text-lg p-3 bg-gray-200 rounded shadow-lg cursor-pointer w-40"
+                  >
+                    <span className="text-xl">{<FaPython />}</span> 
+                    Python
+            </motion.div>
+
 
             <motion.button 
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.8 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="bg-red-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl">
+              className="bg-red-800 text-white px-6 py-2 mt-5 rounded-full flex items-center justify-center drop-shadow-xl">
               View Project
             </motion.button>
+
           </motion.div>
           
           {/* Project 2 */}
