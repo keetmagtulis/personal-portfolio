@@ -52,8 +52,9 @@ const scrollRef = useRef(null);
                     <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
                     </p>
 
-                  <div className="flex flex-wrap mt-10 space-x-5">
-                    <img src="/images/python.png" alt="Error" className="w-10 h-10 bg-transparent"/> 
+                  <div className="flex flex-wrap mt-10 space-x-2 gap-4">
+                    <img src="/images/python.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/javascript.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/database.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/react.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/node.png" alt="Error" className="w-10 h-10 bg-transparent"/>
@@ -61,6 +62,8 @@ const scrollRef = useRef(null);
                     <img src="/images/bootstrap.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/git.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/linux.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/HTML.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/CSS3.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                   </div>
 
             </motion.div>
@@ -223,12 +226,12 @@ const scrollRef = useRef(null);
                   { skill: "DOMAIN MANAGEMENT", icon: <img src="/images/domain.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "SQL", icon: <img src="/images/database.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "GIT", icon: <img src="/images/git.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "JAVASCRIPT", icon: <img src="/images/javascript.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "SOFTWARE DEVELOPMENT", icon: <img src="/images/code.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
-                  { skill: "WEB DEVELOPMENT", icon: <img src="/images/web-dev.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "ACTIVE DIRECTORY", icon: <img src="/images/active-directory.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "REACT", icon: <img src="/images/react.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "LINUX", icon: <img src="/images/linux.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
-                  { skill: "NODE / EXPRESS", icon: <img src="/images/node.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "NODE JS", icon: <img src="/images/node.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "TAILWIND", icon: <img src="/images/tailwind.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "BOOTSTRAP", icon: <img src="/images/bootstrap.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   
