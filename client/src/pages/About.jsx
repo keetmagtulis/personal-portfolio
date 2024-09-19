@@ -264,12 +264,18 @@ const scrollRef = useRef(null);
 
               {/* Experience 1 */}
               <motion.div
-                className="mb-12 relative"
+                className="mb-12 relative gap-4"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
 
+                
+                <img
+                  src="/images/programmer.jpg"
+                  alt="error"
+                  className="w-full h-40 object-cover rounded-md" 
+                />
                 <p className="text-gray-800 font-semibold">2023-Present</p>
                 <h3 className="text-gray-800 text-lg font-bold mt-1">
                   JUNIOR TECHNICAL SUPPORT ANALYST
@@ -277,6 +283,7 @@ const scrollRef = useRef(null);
                 <p className="text-gray-500 mt-2"> 
                   Philippine EDS Techno-Service, Inc. | Iloilo City, Philippines 5000
                 </p>
+ 
                 <p className="mt-2"> 
                   My responsibilities are to configure and maintain network systems, monitor performance, and troubleshoot issues. I implement network security measures and manage user accounts and group policies in Active Directory. Additionally, I provide technical support, resolve hardware and software issues, perform system maintenance, and assist with software updates.
                 </p>
@@ -290,8 +297,14 @@ const scrollRef = useRef(null);
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
 
+                <img
+                  src="/images/costumer-service.jpg" 
+                  alt="error"
+                  className="w-full h-40 object-cover object-center rounded-md" 
+                />
+
                 <p className="text-gray-600">2022-2023</p>
-                <h3 className="text-gray-800 text-lg font-bold mt-1">
+                <h3 className="text-gray-800 text-lg font-bold mt-1 ">
                   CUSTOMER SERVICE REPRESENTATIVE
                 </h3>
                 <p className="text-gray-500 mt-2"> WNS | Iloilo City, Philippines 5000 </p>
@@ -306,6 +319,12 @@ const scrollRef = useRef(null);
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
               >
+
+                <img
+                  src="/images/technical-support.jpg"
+                  alt="error"
+                  className="w-full h-40 object-cover rounded-md" 
+                />
 
                 <p className="text-gray-600">2020-2020</p>
                 <h3 className="text-gray-800 text-lg font-bold mt-1">
