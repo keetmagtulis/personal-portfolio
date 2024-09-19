@@ -59,6 +59,8 @@ const scrollRef = useRef(null);
                     <img src="/images/node.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/tailwind.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                     <img src="/images/bootstrap.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/git.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/linux.png" alt="Error" className="w-10 h-10 bg-transparent"/>
                   </div>
 
             </motion.div>
@@ -220,13 +222,16 @@ const scrollRef = useRef(null);
                   { skill: "PYTHON", icon: <img src="/images/python.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "DOMAIN MANAGEMENT", icon: <img src="/images/domain.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "SQL", icon: <img src="/images/database.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "GIT", icon: <img src="/images/git.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "SOFTWARE DEVELOPMENT", icon: <img src="/images/code.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "WEB DEVELOPMENT", icon: <img src="/images/web-dev.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
-                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <img src="/images/active-directory.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "ACTIVE DIRECTORY", icon: <img src="/images/active-directory.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "REACT", icon: <img src="/images/react.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "LINUX", icon: <img src="/images/linux.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "NODE / EXPRESS", icon: <img src="/images/node.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "TAILWIND", icon: <img src="/images/tailwind.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "BOOTSTRAP", icon: <img src="/images/bootstrap.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  
                 ].map((item, index) => (
                   <motion.div
                     key={index}
