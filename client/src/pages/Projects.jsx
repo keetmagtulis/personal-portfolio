@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import { FaPython, } from 'react-icons/fa';
+
 
 const Projects = () => {
 
@@ -24,13 +24,14 @@ const Projects = () => {
             <p className="text-lg  w-1/2">
             This Service desk Chat-Bot enhances the Intranet Website by providing users with quick answers to frequently asked questions (FAQs) and basic support. Built using the Rasa framework, this Chat-Bot is designed to streamline user interactions and provide efficient support.
             </p>
-            
-            <motion.div        
-                    className="flex items-center gap-2 text-gray-800 mt-2 text-lg p-3 bg-gray-200 rounded shadow-lg cursor-pointer w-40"
-                  >
-                    <span className="text-xl">{<FaPython />}</span> 
-                    Python
-            </motion.div>
+          
+            <div className="flex flex-wrap mt-5 space-x-3"> 
+            <img src="/images/python.png" alt="Error" className="w-10 h-10 bg-transparent"/> 
+            <img src="/images/react.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+            <img src="/images/node.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+            <img src="/images/tailwind.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+            </div>
+
 
 
             <motion.button 
