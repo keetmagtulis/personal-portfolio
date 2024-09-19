@@ -218,7 +218,6 @@ const scrollRef = useRef(null);
                   { skill: "REACT", icon: <img src="/images/react.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "NODE / EXPRESS", icon: <img src="/images/node.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                   { skill: "TAILWIND", icon: <img src="/images/tailwind.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
-
                   { skill: "BOOTSTRAP", icon: <img src="/images/bootstrap.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                 ].map((item, index) => (
                   <motion.div
