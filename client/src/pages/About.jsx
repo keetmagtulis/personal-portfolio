@@ -21,7 +21,7 @@ const scrollRef = useRef(null);
         
         <div className="grid gap-6 lg:grid-cols-2 w-4/5 ">
 
-      
+            {/* About Me */}
             <motion.div 
               layoutId="aboutme"
               initial= {{ opacity: 0}}
@@ -52,11 +52,19 @@ const scrollRef = useRef(null);
                     <p className="text-lg"> Outside of my professional interests, I enjoy going out, playing games, strumming my guitar, and diving into good books. I believe that a balance of work and hobbies fuels my creativity and keeps me motivated. Whether it’s understanding the latest tech trends or enjoying my favorite pastimes, I’m always eager to explore, learn, and grow.
                     </p>
 
+                  <div className="flex flex-wrap mt-10 space-x-5">
+                    <img src="/images/python.png" alt="Error" className="w-10 h-10 bg-transparent"/> 
+                    <img src="/images/database.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/react.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/node.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/tailwind.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                    <img src="/images/bootstrap.png" alt="Error" className="w-10 h-10 bg-transparent"/>
+                  </div>
 
             </motion.div>
           
             <div>
-
+            {/* Skills */}
             <motion.div 
               layoutId="skills"
               initial= {{ opacity: 0}}
@@ -93,7 +101,7 @@ const scrollRef = useRef(null);
 
             </motion.div>
           
-            
+            {/* Work Exp */}
             <motion.div
               layoutId="experience"
               initial= {{ opacity: 0}}
