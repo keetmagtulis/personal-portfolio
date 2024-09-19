@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import {motion, AnimatePresence} from 'framer-motion';
-import { FaNetworkWired, FaPython, FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa'; // Import specific icons
-import { MdDomain, MdWeb } from 'react-icons/md'; // Import additional icons as needed
-import { SiTailwindcss, SiBootstrap, SiMicrosoft } from 'react-icons/si'; // Import more icons
+
 
 
 
@@ -210,22 +208,22 @@ const scrollRef = useRef(null);
               >
                 {/* Array of skills with corresponding icons */}
                 {[
-                  { skill: "NETWORK ADMINISTRATION", icon: <FaNetworkWired /> },
-                  { skill: "PYTHON", icon: <FaPython /> },
-                  { skill: "DOMAIN MANAGEMENT", icon: <MdDomain /> },
-                  { skill: "SQL", icon: <FaDatabase /> },
-                  { skill: "SOFTWARE DEVELOPMENT", icon: <FaPython /> },
-                  { skill: "WEB DEVELOPMENT", icon: <MdWeb /> },
-                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <SiMicrosoft /> },
-                  { skill: "REACT", icon: <FaReact /> },
-                  { skill: "NODE / EXPRESS", icon: <FaNodeJs /> },
-                  { skill: "TAILWIND", icon: <SiTailwindcss /> },
+                  { skill: "NETWORK ADMINISTRATION", icon: <img src="/images/network.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "PYTHON", icon: <img src="/images/python.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "DOMAIN MANAGEMENT", icon: <img src="/images/domain.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "SQL", icon: <img src="/images/database.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "SOFTWARE DEVELOPMENT", icon: <img src="/images/code.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "WEB DEVELOPMENT", icon: <img src="/images/web-dev.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "ACTIVE DIRECTORY MANAGEMENT", icon: <img src="/images/active-directory.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "REACT", icon: <img src="/images/react.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "NODE / EXPRESS", icon: <img src="/images/node.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
+                  { skill: "TAILWIND", icon: <img src="/images/tailwind.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
 
-                  { skill: "BOOTSTRAP", icon: <SiBootstrap /> },
+                  { skill: "BOOTSTRAP", icon: <img src="/images/bootstrap.png" alt="Error" className="w-7 h-7 bg-transparent"/> },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="flex items-center gap-2 text-gray-800 text-lg mb-2 p-3 bg-gray-100 rounded shadow-lg cursor-pointer"
+                    className="flex items-center gap-1 text-gray-800 text-lg mb-2 p-3 bg-gray-100 rounded shadow-lg cursor-pointer"
                     variants={{
                       hidden: { opacity: 0, x: Math.random() * 40 - 20, y: Math.random() * 40 - 20 },
                       visible: { opacity: 1, x: 0, y: 0},
