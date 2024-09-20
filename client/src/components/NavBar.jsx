@@ -127,9 +127,14 @@ const NavBar = () => {
           </motion.div>
           
         </Link>
-        <RouterLink
-          to="/socials"
-          className="text-neutral-200  px-2 py-2 rounded-md text-s font-normal"
+
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-10}
+          duration={500}
+          className="cursor-pointer text-neutral-200  px-2 py-2 rounded-md text-s font-normal"
         >
           <motion.div
             whileHover={{ scale: 1.05}}
@@ -138,7 +143,8 @@ const NavBar = () => {
           >CONTACT
           </motion.div>
           
-        </RouterLink>
+        </Link>
+
       </div>
 
       { /*Soc Med Contact Icons*/}
