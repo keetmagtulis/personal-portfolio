@@ -12,10 +12,11 @@ const Projects = () => {
              style={{ gridTemplateRows: '600px 600px 600px', width: '86%' }}> {/* Fixed height for each row */}
           
         {/* Project 1 */}
-        <motion.div className="bg-gradient-to-br from-neutral-900 to-violet-800 rounded-lg shadow-md p-6 h-full flex items-center justify-between">
+        <motion.div className="bg-gradient-to-r from-black from-0% via-gray-900 via-40% to-blue-800 to-100% rounded-lg p-6 h-full flex items-center justify-between drop-shadow-2xl">
           {/* Text Section */}
-          <div className="w-1/2">
-            <h2 className="text-neutral-100 text-3xl font-semibold mb-2 drop-shadow-lg">
+         
+          <div className="w-1/2 px-5">
+            <h2 className="text-neutral-100 text-5xl font-semibold mb-2 drop-shadow-lg">
               SERVICE DESK CHATBOT
             </h2>
             <p className="text-lg text-neutral-100 mb-4">
@@ -39,7 +40,8 @@ const Projects = () => {
 
           {/* Image Section */}
           <div className="w-1/2 flex justify-center">
-            <img
+            <motion.img
+              
               src="/images/chatbot.png"
               alt="Chatbot Project"
               className=" rounded-lg mb-4"
@@ -71,6 +73,7 @@ const Projects = () => {
             </motion.button>
           </motion.div>
 
+          {/* Project 3 */}
           <motion.div className="bg-white rounded-lg shadow-md p-6 h-full">
 
             <img
