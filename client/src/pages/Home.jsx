@@ -37,6 +37,7 @@ const Home = () => {
                 restDelta: 0.001
               }
             }}
+            whileHover={{scale:1.1, rotate: 360,}}
           className="w-1/3 h-96 rounded-full overflow-hidden border-none ">
         
           
@@ -48,17 +49,20 @@ const Home = () => {
           initial={{opacity: 0, x:'100vw'}}
           animate={{opacity: 1, x: 0}}
           transition={{type: 'spring', stiffness: 50, delay: 0.2}}
-          className=" max-w-md">
           
-          <h2 className="text-stone-900 text-5xl font-semibold">SOFTWARE</h2>
-          <h1 className="text-stone-900 text-7xl mb-2 font-bold">DEVELOPER</h1>
-          <p>Hi, I’m Kit. I’m an IT Professional with 2 years of experience focusing on IT and Technical Support, Network Administration, Active Directory Management, and Software Development.</p>
+          className=" max-w-md">
+          <div>
+          <h2 className="text-5xl font-semibold bg-gradient-to-r from-black via-gray-700 to-gray-600 bg-clip-text text-transparent">SOFTWARE</h2>
+          <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-gray-700 to-gray-600 bg-clip-text text-transparent">DEVELOPER</h1>
+          </div>
+
+          <p className="mt-3">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
 
           <motion.button 
             whileHover={{ scale: 1.1}}
             whileTap={{scale: 0.8}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="bg-red-700 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" 
+            className="bg-neutral-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" 
             onClick={onButtonClick}>
             Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>
           </motion.button>
