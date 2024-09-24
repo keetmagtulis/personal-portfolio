@@ -52,8 +52,8 @@ const Home = () => {
           
           className=" max-w-md">
           <div>
-          <h2 className="text-5xl font-semibold bg-gradient-to-r from-black via-gray-700 to-gray-600 bg-clip-text text-transparent">SOFTWARE</h2>
-          <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-gray-700 to-gray-600 bg-clip-text text-transparent">DEVELOPER</h1>
+          <h2 className="text-5xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-500 bg-clip-text text-transparent">SOFTWARE</h2>
+          <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-500 bg-clip-text text-transparent">DEVELOPER</h1>
           </div>
 
           <p className="mt-3">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
@@ -61,7 +61,7 @@ const Home = () => {
           
 
           <motion.button 
-            whileHover={{scale: 1.02,}}
+            whileHover={{scale: 1.1,}}
             whileTap={{scale: 0.8}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
             className="bg-neutral-800 text-white px-6 py-2 mt-2 rounded-full flex items-center justify-center drop-shadow-xl"
