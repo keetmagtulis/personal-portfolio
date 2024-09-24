@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useRef} from "react";
 import {motion} from "framer-motion";
 
 
 const Projects = () => {
+
+  const scrollRef = useRef(null);
 
     return (
       <div className="flex justify-center items-center min-h-screen" id="projects">
@@ -12,9 +14,19 @@ const Projects = () => {
              style={{ gridTemplateRows: '600px 600px 600px', width: '86%' }}> {/* Fixed height for each row */}
           
         {/* Project 1 */}
-        <motion.div className="bg-gradient-to-r from-black from-0% via-gray-900 via-40% to-blue-800 to-100% rounded-lg p-6 h-full flex items-center justify-between drop-shadow-2xl">
+        <motion.div
+        className="bg-gradient-to-r from-black from-0% via-gray-900 via-40% to-blue-800 to-100% rounded-lg p-6 h-full flex items-center justify-between drop-shadow-2xl"
+        initial= {{ opacity: 0, x: 50}}
+        whileInView={{opacity: 1, x: 0 ,  
+          transition: {
+                    delay: 0.3,
+                    duration: 1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}}
+
+        viewport={{root: scrollRef}}>
+
           {/* Text Section */}
-         
           <div className="w-1/2 px-5">
             <h2 className="text-neutral-100 text-5xl font-semibold mb-2 drop-shadow-lg">
               SERVICE DESK CHATBOT

@@ -27,17 +27,17 @@ const Home = () => {
 
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.3,
+            whileHover={{scale:1.1, rotate: 360, transition: {
+              duration: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
               scale: {
                 type: "spring",
                 damping: 7,
                 stiffness: 300,
                 restDelta: 0.001
-              }
             }}
-            whileHover={{scale:1.1, rotate: 360,}}
+              
+            }}
           className="w-1/3 h-96 rounded-full overflow-hidden border-none ">
         
           
