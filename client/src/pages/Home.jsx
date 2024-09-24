@@ -26,7 +26,7 @@ const Home = () => {
         <motion.div 
 
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.2 }}
             whileHover={{scale:1.1, rotate: 360, transition: {
               duration: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
