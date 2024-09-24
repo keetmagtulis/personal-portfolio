@@ -58,16 +58,21 @@ const Home = () => {
 
           <p className="mt-3">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
 
+          
+
           <motion.button 
-            whileHover={{ scale: 1.1}}
+            whileHover={{scale: 1.02,}}
             whileTap={{scale: 0.8}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="bg-neutral-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl" 
+            className="bg-neutral-800 text-white px-6 py-2 mt-2 rounded-full flex items-center justify-center drop-shadow-xl"
             onClick={onButtonClick}>
-            Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>
+            Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>   
           </motion.button>
 
+
+        
         </motion.div>
+
 
       </div>
     

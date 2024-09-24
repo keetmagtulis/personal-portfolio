@@ -50,52 +50,15 @@ const Projects = () => {
         </motion.div>
 
           {/* Project 2 */}
-          <motion.div className="bg-white rounded-lg shadow-md p-6 h-full">
+          <motion.div className="bg-neutral-800 rounded-lg shadow-md p-6 h-full">
 
-            <img
-            src="/images/skills-background.jpg"
-            alt="Profile"
-            className="w-full h-60 object-cover rounded-lg mb-4"
-            />
-
-            <h2 className="text-gray-800 text-2xl font-semibold mb-2 border-neutral-600 pb-2 drop-shadow-lg">
-              PROJECT NAME
-            </h2>
-            <p className="text-lg w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae libero excepturi consequatur at hic sapiente quia voluptatem saepe quaerat nobis. Atque totam ab debitis tempora. Dolorem deleniti explicabo earum ratione.
-            </p>
-            <motion.button 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="bg-red-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl">
-              View Project
-            </motion.button>
           </motion.div>
 
           {/* Project 3 */}
-          <motion.div className="bg-white rounded-lg shadow-md p-6 h-full">
+          <motion.div className="bg-neutral-800 rounded-lg shadow-md p-6 h-full">
+          </motion.div>
 
-            <img
-            src="/images/skills-background.jpg"
-            alt="Profile"
-            className="w-full h-60 object-cover rounded-lg mb-4"
-            />
 
-            <h2 className="text-gray-800 text-2xl font-semibold mb-4  border-neutral-600 pb-2 drop-shadow-lg">
-              PROJECT NAME
-            </h2>
-            <p className="text-lg w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae libero excepturi consequatur at hic sapiente quia voluptatem saepe quaerat nobis. Atque totam ab debitis tempora. Dolorem deleniti explicabo earum ratione.
-            </p>
-            <motion.button 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="bg-red-800 text-white px-6 py-2 mt-9 rounded-full flex items-center justify-center drop-shadow-xl">
-              View Project
-            </motion.button>
-            </motion.div>
                               
         </div>
       </div>

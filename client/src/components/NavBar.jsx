@@ -10,55 +10,56 @@ const NavBar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    let timeoutId;
 
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      let timeoutId;
 
-      // Always show the div when the user is at the top of the page
-      if (scrollTop === 0) {
+      const handleScroll = () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+        // Always show the div when the user is at the top of the page
+        if (scrollTop === 0) {
+          setIsVisible(true);
+          clearTimeout(timeoutId);
+          return;
+        }
+    
+        // Show the div when the user scrolls
         setIsVisible(true);
+    
+        // Hide the div after 1.5 seconds of no scrolling if not hovered
         clearTimeout(timeoutId);
-        return;
-      }
-
-      // Show the div when the user scrolls
+        timeoutId = setTimeout(() => {
+          if (!isHovered) {
+            setIsVisible(false);
+          }
+        }, 1500);
+      };
+    
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+    
+      // Cleanup scroll event listener on unmount
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        clearTimeout(timeoutId);
+      };
+    }, [isHovered]);
+    
+    const handleMouseEnter = () => {
       setIsVisible(true);
-
-      // Hide the div after 2 seconds of no scrolling if not hovered
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
+      setIsHovered(true);
+    };
+    
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+      
+      // Hide the div after 1 second if not hovered
+      setTimeout(() => {
         if (!isHovered) {
           setIsVisible(false);
         }
-      }, 1500);
+      }, 1000);
     };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup scroll event listener on unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
-    };
-  }, [isHovered]);
-
-  const handleMouseEnter = () => {
-    setIsVisible(true);
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-
-    // Hide the div again after a delay when hover is removed
-    setTimeout(() => {
-      if (!isHovered) {
-        setIsVisible(false);
-      }
-    }, 2000);
-  };
 
   return (
 
@@ -70,82 +71,83 @@ const NavBar = () => {
       className="flex w-full mx-auto py-4 items-center top-0"
       
     >
-      {/* Centered Navigation Links */}
-      <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={`fixed left-1/2 transform -translate-x-1/2 flex space-x-4 bg-neutral-900 shadow-lg rounded-full px-6 p-2 z-40  transition-opacity duration-500 mt-2 mx-2 ${
-        isVisible ? "opacity-90" : "opacity-0"
-      }`}
-      >
-        <Link
-          to='home'
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={0}
-          className="cursor-pointer text-neutral-200 px-2 py-2 rounded-md text-s font-normal"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05}}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >HOME
-          </motion.div>
-        </Link>
+{/* Centered Navigation Links */}
+<div
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+  className={`fixed left-1/2 transform -translate-x-1/2 flex space-x-6 bg-neutral-800 shadow-xl mt-5 rounded-full px-8 py-4 z-40 transition-all duration-500 ease-in-out ${
+    isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+  }`}
+>
+  <Link
+    to="home"
+    spy={true}
+    smooth={true}
+    duration={500}
+    offset={0}
+    className="cursor-pointer text-neutral-200 font-medium"
+  >
+    <motion.div
+      whileHover={{ scale: 1.1, color: "#fff" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
+    >
+      <span className="mr-2"></span>HOME
+    </motion.div>
+  </Link>
 
-        <Link
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-20}
-          duration={500}
-          className="cursor-pointer text-neutral-200 px-2 py-2 rounded-md text-s font-normal"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05,}}
-            whileTap={{ scale: 0.9 }}
-            
-          >ABOUT
-          </motion.div>
+  <Link
+    to="about"
+    spy={true}
+    smooth={true}
+    offset={-20}
+    duration={500}
+    className="cursor-pointer text-neutral-200 font-medium"
+  >
+    <motion.div
+      whileHover={{ scale: 1.1, color: "#fff" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
+    >
+      <span className="mr-2"></span>ABOUT
+    </motion.div>
+  </Link>
 
-        </Link>
-        <Link
-          to="projects"
-          spy={true}
-          smooth={true}
-          offset={-10}
-          duration={500}
-          className="cursor-pointer text-neutral-200  px-2 py-2 rounded-md text-s font-normal"
-        >
+  <Link
+    to="projects"
+    spy={true}
+    smooth={true}
+    offset={-10}
+    duration={500}
+    className="cursor-pointer text-neutral-200 font-medium"
+  >
+    <motion.div
+      whileHover={{ scale: 1.1, color: "#fff" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
+    >
+      <span className="mr-2"></span>PROJECTS
+    </motion.div>
+  </Link>
 
-          <motion.div
-            whileHover={{ scale: 1.05}}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >PROJECTS
-          </motion.div>
-          
-        </Link>
+  <Link
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={-10}
+    duration={500}
+    className="cursor-pointer text-neutral-200 font-medium"
+  >
+    <motion.div
+      whileHover={{ scale: 1.1, color: "#fff" }}
+      whileTap={{ scale: 0.95 }}
+      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
+    >
+      <span className="mr-2"></span>CONTACT
+    </motion.div>
+  </Link>
+</div>
 
-        <Link
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-10}
-          duration={500}
-          className="cursor-pointer text-neutral-200  px-2 py-2 rounded-md text-s font-normal"
-        >
-          <motion.div
-            whileHover={{ scale: 1.05}}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >CONTACT
-          </motion.div>
-          
-        </Link>
-
-      </div>
 
       { /*Soc Med Contact Icons*/}
       <div className="ml-auto flex items-center mr-7">
