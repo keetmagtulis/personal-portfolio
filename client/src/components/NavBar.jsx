@@ -8,7 +8,7 @@ const NavBar = () => {
 
   const [isVisible, setIsVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+ 
 
   useEffect(() => {
 
@@ -17,11 +17,6 @@ const NavBar = () => {
       const handleScroll = () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
-        if(scrollTop > 100) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
 
         // Always show the div when the user is at the top of the page
         if (scrollTop === 0) {
