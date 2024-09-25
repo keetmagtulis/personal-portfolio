@@ -1,7 +1,7 @@
 import React from "react";
 import '../../src/styles/index.css'; // Ensure this file imports Tailwind CSS correctly
 import { motion } from "framer-motion";
-
+import { Link as RouterLink } from "react-router-dom";
 
 
 
@@ -56,15 +56,15 @@ const Home = () => {
           <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-500 bg-clip-text text-transparent">DEVELOPER</h1>
           </div>
 
-          <p className="mt-3">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
+          <p className="my-2 ml-2">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
 
-          
+  
 
           <motion.button 
             whileHover={{scale: 1.1,}}
             whileTap={{scale: 0.8}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="bg-neutral-800 text-white px-6 py-2 mt-2 rounded-full flex items-center justify-center drop-shadow-xl"
+            className="bg-neutral-800 text-white px-6 py-2 my-2 rounded-full flex items-center justify-center drop-shadow-xl"
             onClick={onButtonClick}>
             Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>   
           </motion.button>
