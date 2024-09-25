@@ -68,85 +68,76 @@ const NavBar = () => {
       initial={{ y: -250 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.5 }}
-      className="flex w-full mx-auto py-4 items-center top-0"
+      className="flex w-full mx-auto py-4 items-center"
       
     >
-{/* Centered Navigation Links */}
-<div
-  onMouseEnter={handleMouseEnter}
-  onMouseLeave={handleMouseLeave}
-  className={`fixed left-1/2 transform -translate-x-1/2 flex space-x-6 bg-neutral-800 shadow-xl mt-5 rounded-full px-8 py-4 z-40 transition-all duration-500 ease-in-out ${
-    isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-  }`}
->
-  <Link
-    to="home"
-    spy={true}
-    smooth={true}
-    duration={500}
-    offset={0}
-    className="cursor-pointer text-neutral-200 font-medium"
-  >
-    <motion.div
-      whileHover={{ scale: 1.1, color: "#fff" }}
-      whileTap={{ scale: 0.95 }}
-      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
-    >
-      <span className="mr-2"></span>HOME
-    </motion.div>
-  </Link>
+      {/* Centered Navigation Links */}
+        <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`navigation fixed left-1/2 transform -translate-x-1/2 flex mt-10 px-8 py-4 z-40 transition-all duration-500 ease-in-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
+        
+      >
+        <ul className='unordered-list'>
 
-  <Link
-    to="about"
-    spy={true}
-    smooth={true}
-    offset={-20}
-    duration={500}
-    className="cursor-pointer text-neutral-200 font-medium"
-  >
-    <motion.div
-      whileHover={{ scale: 1.1, color: "#fff" }}
-      whileTap={{ scale: 0.95 }}
-      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
-    >
-      <span className="mr-2"></span>ABOUT
-    </motion.div>
-  </Link>
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={0}
+          className="link"
+        >
+          <motion.div className="pages">
+            HOME
+          </motion.div>
+        
+        </Link>
 
-  <Link
-    to="projects"
-    spy={true}
-    smooth={true}
-    offset={-10}
-    duration={500}
-    className="cursor-pointer text-neutral-200 font-medium"
-  >
-    <motion.div
-      whileHover={{ scale: 1.1, color: "#fff" }}
-      whileTap={{ scale: 0.95 }}
-      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
-    >
-      <span className="mr-2"></span>PROJECTS
-    </motion.div>
-  </Link>
+        <Link
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={-20}
+          duration={500}
+          className="link" 
+        >
+          <motion.div className="pages">
+            ABOUT
+          </motion.div>
+        </Link>
 
-  <Link
-    to="contact"
-    spy={true}
-    smooth={true}
-    offset={-10}
-    duration={500}
-    className="cursor-pointer text-neutral-200 font-medium"
-  >
-    <motion.div
-      whileHover={{ scale: 1.1, color: "#fff" }}
-      whileTap={{ scale: 0.95 }}
-      className="px-3 py-2 rounded-lg transition-all duration-200 hover:bg-white/20"
-    >
-      <span className="mr-2"></span>CONTACT
-    </motion.div>
-  </Link>
-</div>
+        <Link
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-10}
+          duration={500}
+          className="link"
+        >
+          <motion.div className="pages">
+            PROJECTS
+          </motion.div>
+        </Link>
+
+        <Link
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-10}
+          duration={500}
+          className="link"
+        >
+          <motion.div className="pages">
+           CONTACT
+          </motion.div>
+        </Link>
+
+        </ul>
+   
+      </div>
 
 
       { /*Soc Med Contact Icons*/}
