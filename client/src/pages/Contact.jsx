@@ -97,7 +97,7 @@ const Contact = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="flex items-center justify-center bg-red-800 text-white px-6 py-3 mt-5 rounded-full drop-shadow-xl w-40 mx-auto"
+            className="flex items-center justify-center bg-neutral-800 text-white px-6 py-3 mt-5 rounded-full drop-shadow-xl w-40 mx-auto"
             type="submit"
           >
             Send Email

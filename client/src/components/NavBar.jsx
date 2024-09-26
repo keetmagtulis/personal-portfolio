@@ -3,8 +3,33 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import '../styles/index.css';
+import { useEffect, useState } from 'react';
 
 const NavBar = () => {
+
+  const [isScrolled, setIsScrolled] = useState(false) 
+
+  useEffect(()=> {
+    
+    const handleScroll = () => {
+
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if( scrollTop > 50) {
+          setIsScrolled(true);
+      } else {
+          setIsScrolled(false);
+      }
+      
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+
+  }, []) 
 
   return (
 
@@ -77,8 +102,21 @@ const NavBar = () => {
    
       </div>
 
+      <div className={`bottom-2 right-2 fixed bg-neutral-800 h-14 w-14 rounded-lg flex items-center justify-center ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}>
+      
+      <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={0}
+          className='cursor-pointer'
+        >
+        <button><img src="/images/up-arrow.png" alt="" className='w-8 h-8' /></button>
+    
+        </Link>
+      </div>
 
-      { /*Soc Med Contact Icons*/}
       <div className="flex space-x-3 mr-5">
         <RouterLink to="https://github.com/keetmagtulis" target="_blank">
           <motion.img
