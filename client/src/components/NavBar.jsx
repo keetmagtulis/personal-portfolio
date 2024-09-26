@@ -1,71 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import '../styles/index.css';
 
 const NavBar = () => {
-
-  const [isVisible, setIsVisible] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
- 
-
-  useEffect(() => {
-
-      let timeoutId;
-
-      const handleScroll = () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-
-        // Always show the div when the user is at the top of the page
-        if (scrollTop === 0) {
-          setIsVisible(true);
-          clearTimeout(timeoutId);
-          
-          return;
-        }
-    
-        // Show the div when the user scrolls
-        setIsVisible(true);
-    
-        // Hide the div after 1.5 seconds of no scrolling if not hovered
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          if (!isHovered) {
-            setIsVisible(false);
-          }
-        }, 1500);
-      };
-    
-      // Add scroll event listener
-      window.addEventListener("scroll", handleScroll);
-    
-      // Cleanup scroll event listener on unmount
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-        clearTimeout(timeoutId);
-      };
-    }, [isHovered]);
-   
-
-
-
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-      setIsHovered(true);
-
-    };
-    
-    const handleMouseLeave = () => {
-      
-      setTimeout(() => {
-        if (isHovered) {
-          setIsVisible(false);
-          setIsHovered(false);
-        }
-      }, 1000);
-    };
 
   return (
 
@@ -74,18 +13,11 @@ const NavBar = () => {
       initial={{ y: -250 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.5 }}
-      className="flex w-full mx-auto py-4 items-center top-0"
+      className="flex w-full py-4 items-center top-0"
       
     >
-      {/* Centered Navigation Links */}
-        <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={`navigation fixed left-1/2 transform -translate-x-1/2 flex mt-4 px-8 py-4 z-40 transition-all duration-500 ease-in-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-        }`}
+      <div className={`navigation flex mx-auto translate-x-32 px-8 z-40 transition-all duration-500 ease-in-out`} >
         
-      >
         <ul className='unordered-list'>
 
         <Link
@@ -147,7 +79,7 @@ const NavBar = () => {
 
 
       { /*Soc Med Contact Icons*/}
-      <div className="ml-auto flex items-center mr-7 mt-2  space-x-3">
+      <div className="flex space-x-3 mr-5">
         <RouterLink to="https://github.com/keetmagtulis" target="_blank">
           <motion.img
             whileHover={{ scale: 1.3}}
