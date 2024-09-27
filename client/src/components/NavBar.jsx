@@ -102,7 +102,11 @@ const NavBar = () => {
    
       </div>
 
-      <div className={`bottom-2 right-2 fixed bg-neutral-800 h-14 w-14 rounded-lg flex items-center justify-center ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}>
+      <motion.div className={`bottom-2 right-2 fixed bg-neutral-800 h-12 w-12 rounded-lg flex items-center justify-center ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}
+        whileHover={{scale: 1.1}} 
+        whileTap= {{scale: 0.9}} 
+        transition={{type: "spring", stiffness: 500, damping: 20}}
+          >
       
       <Link
           to="home"
@@ -111,11 +115,13 @@ const NavBar = () => {
           duration={500}
           offset={0}
           className='cursor-pointer'
+          
         >
-        <button><img src="/images/up-arrow.png" alt="" className='w-8 h-8' /></button>
+        <motion.button 
+        ><img src="/images/up-arrow.png" alt="" className='w-7 h-7' /></motion.button>
     
         </Link>
-      </div>
+      </motion.div>
 
       <div className="flex space-x-3 mr-5">
         <RouterLink to="https://github.com/keetmagtulis" target="_blank">
