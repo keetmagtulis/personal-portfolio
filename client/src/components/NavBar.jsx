@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/index.css';
 import { useEffect, useState } from 'react';
 
 const NavBar = () => {
 
-  const [isScrolled, setIsScrolled] = useState(false) 
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [showNav, setShowNav] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(()=> {
     
@@ -15,7 +17,7 @@ const NavBar = () => {
 
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if( scrollTop > 50) {
+      if( scrollTop > 55) {
           setIsScrolled(true);
       } else {
           setIsScrolled(false);
@@ -31,7 +33,27 @@ const NavBar = () => {
 
   }, []) 
 
+
+  const handleMouseEnter = () => {
+    setShowNav(true);
+    setIsHovered(true);
+  };
+ 
+  const handleMouseLeave = () => {
+   
+    setTimeout(() => {
+      if (isHovered) {
+        setShowNav(false);
+        setIsHovered(false);
+      }
+    }, 1500);
+  };
+
+
+
   return (
+
+    <div>
 
     <motion.nav
       id="home"
@@ -41,7 +63,7 @@ const NavBar = () => {
       className="flex w-full py-4 items-center top-0"
       
     >
-      <div className={`navigation flex mx-auto translate-x-32 px-8 z-40 transition-all duration-500 ease-in-out`} >
+      <div className={`navigation flex mx-auto translate-x-28 px-8 z-40 transition-all duration-500 ease-in-out`} >
         
         <ul className='unordered-list'>
 
@@ -102,26 +124,7 @@ const NavBar = () => {
    
       </div>
 
-      <motion.div className={`bottom-2 right-2 fixed bg-neutral-800 h-12 w-12 rounded-lg flex items-center justify-center ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}
-        whileHover={{scale: 1.1}} 
-        whileTap= {{scale: 0.9}} 
-        transition={{type: "spring", stiffness: 500, damping: 20}}
-          >
-      
-      <Link
-          to="home"
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={0}
-          className='cursor-pointer'
-          
-        >
-        <motion.button 
-        ><img src="/images/up-arrow.png" alt="" className='w-7 h-7' /></motion.button>
-    
-        </Link>
-      </motion.div>
+
 
       <div className="flex space-x-3 mr-5">
         <RouterLink to="https://github.com/keetmagtulis" target="_blank">
@@ -156,7 +159,129 @@ const NavBar = () => {
           src="/images/facebook.png" alt="" className="w-7 h-7 " />
         </RouterLink>
       </div>
+
     </motion.nav>
+
+
+    <motion.div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`fixed bottom-5 transform -translate-x-1/2 bg-neutral-800 h-3 w-80 rounded-lg flex items-center justify-center z-50 cursor-pointer opacity-95 border border-neutral-700 shadow-sm shadow-neutral-600 ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}
+        style={{left:'50%'}}    
+        onClick={() => {
+          if (showNav) {
+            setShowNav(false);
+          } else {
+            setShowNav(true);
+          }
+        }}
+
+      >
+      
+      </motion.div>
+    
+    <AnimatePresence>
+        {showNav && (
+          <>
+            {/* Blur Background */}
+            {/* <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+            /> */}
+
+
+              <motion.div className={`bottom-10 fixed left-1/2 transform -translate-x-1/2  flex items-center justify-center z-50 space-x-3`} 
+                initial={{ opacity: 0 }} // Start hidden and slightly above
+                animate={{ opacity: 1 }} // Animate to visible and at original position
+                exit={{ opacity: 0,}} // Slide back up and fade out
+                transition={{ duration: 0.3 }} // Slightly faster for button animation
+              >
+                    
+                    <Link
+                        to="home"
+                        spy={true}
+                        smooth={true}
+                        duration={100}
+                        offset={0}
+                        className='cursor-pointer'
+                        
+                      >
+                      <motion.button
+                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      whileHover={{scale:1.1}}
+                      onClick={() => setShowNav(false)}>HOME
+                      
+                      </motion.button>
+                      </Link>
+
+                      <Link
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        duration={400}
+                        offset={-20}
+                        className='cursor-pointer'
+                        
+                      >
+                      <motion.button
+                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      whileHover={{scale:1.1}}
+                      onClick={() => setShowNav(false)}>ABOUT
+                      
+                      </motion.button>
+                      </Link>
+
+                      <Link
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={10}
+                        className='cursor-pointer'
+                        
+                      >
+                      <motion.button
+                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      whileHover={{scale:1.1}}
+                      onClick={() => setShowNav(false)}>PROJECTS
+                      
+                      </motion.button>
+                      </Link>
+
+                      <Link
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={10}
+                        className='cursor-pointer'
+                        
+                      >
+                      <motion.button
+                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      whileHover={{scale:1.1}}
+                      onClick={() => setShowNav(false)}>CONTACT
+                      
+                      </motion.button>
+                      </Link>
+
+
+
+
+              </motion.div>
+
+
+
+          </>
+        )}
+      </AnimatePresence>
+
+
+    </div>
+
   );
 };
 
