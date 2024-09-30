@@ -62,7 +62,7 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Name"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-800"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-neutral-800"
               required
               value={formData.name}
               onChange={handleChange}
@@ -74,7 +74,7 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-800"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-neutral-800"
               required
               value={formData.email}
               onChange={handleChange}
@@ -86,7 +86,7 @@ const Contact = () => {
               name="message"
               placeholder="Type your message here"
               rows="5"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-800"
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-neutral-800"
               required
               value={formData.message}
               onChange={handleChange}
@@ -104,52 +104,56 @@ const Contact = () => {
           </motion.button>
         </form>
 
-        {/* Social Links */}
-        <div className="flex items-center mt-5">
-          <RouterLink to="https://github.com/keetmagtulis" target="_blank">
-            <motion.img
-              whileHover={{ scale: 1.3 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              src="/images/github-sign.png"
-              alt="GitHub"
-              className="w-8 h-8 mx-2"
-            />
-          </RouterLink>
+        <h2
+        className={`mt-5 font-light`}
+        >SOCIAL LINKS:</h2>
 
-          <RouterLink to="https://www.linkedin.com/in/kit-magtulis-0532362b7/" target="_blank">
-            <motion.img
-              whileHover={{ scale: 1.3 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              src="/images/linkedin.png"
-              alt="LinkedIn"
-              className="w-8 h-8 mx-2"
-            />
-          </RouterLink>
+          {/* Social Links */}
+          <div className="flex items-center mt-0 space-x-2">
+            <RouterLink to="https://github.com/keetmagtulis" target="_blank">
+              <motion.img
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src="/images/github-sign.png"
+                alt="GitHub"
+                className="w-8 h-8 "
+              />
+            </RouterLink>
 
-          <RouterLink to="mailto:magtuliskit8@gmail.com" target="_blank">
-            <motion.img
-              whileHover={{ scale: 1.3 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              src="/images/email.png"
-              alt="Email"
-              className="w-10 h-10 mx-2"
-            />
-          </RouterLink>
+            <RouterLink to="https://www.linkedin.com/in/kit-magtulis-0532362b7/" target="_blank">
+              <motion.img
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src="/images/linkedin.png"
+                alt="LinkedIn"
+                className="w-8 h-8"
+              />
+            </RouterLink>
 
-          <RouterLink to="https://www.messenger.com/t/100054884522654" target="_blank">
-            <motion.img
-              whileHover={{ scale: 1.3 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              src="/images/facebook.png"
-              alt="Facebook"
-              className="w-8 h-8 mx-2"
-            />
-          </RouterLink>
-        </div>
+            <RouterLink to="mailto:magtuliskit8@gmail.com" target="_blank">
+              <motion.img
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src="/images/email.png"
+                alt="Email"
+                className="w-10 h-10"
+              />
+            </RouterLink>
+
+            <RouterLink to="https://www.messenger.com/t/100054884522654" target="_blank">
+              <motion.img
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                src="/images/facebook.png"
+                alt="Facebook"
+                className="w-8 h-8"
+              />
+            </RouterLink>
+          </div>
       </div>
     </div>
   );
