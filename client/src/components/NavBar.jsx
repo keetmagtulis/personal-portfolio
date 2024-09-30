@@ -46,7 +46,7 @@ const NavBar = () => {
         setShowNav(false);
         setIsHovered(false);
       }
-    }, 2500);
+    }, 3500);
   };
 
 
@@ -185,7 +185,7 @@ const NavBar = () => {
 
 
               <motion.div 
-                className={`bottom-10 fixed transform -translate-x-1/2  flex items-center justify-center z-50`}
+                className={`bottom-10 fixed transform -translate-x-1/2  flex items-center justify-center z-50 w-1/3`}
                 style={{left:'50%'}} 
                 initial={{ opacity: 0,}} 
                 animate={{ opacity: 1, }} 
@@ -193,78 +193,78 @@ const NavBar = () => {
                 transition={{ duration: 0.3 }} 
               >
                 <motion.div
-                  className={`flex items-center justify-center bg-neutral-900 rounded-lg w-1/3 h-20 space-x-2`}
+                  className={`flex items-center justify-center bg-neutral-900 rounded-lg w-full h-20 space-x-2`}
                   initial={{ opacity: 0, translateY: 20 }} 
                   animate={{ opacity: 1, translateY: 0 }} 
                   exit={{ opacity: 0, translateY: 20 }}   
                   transition={{ duration: 0.3, ease: "easeInOut" }}>    
-                  <Link
-                        to="home"
-                        spy={true}
-                        smooth={true}
-                        duration={400}
-                        offset={0}
-                        className='cursor-pointer'
+                    <Link
+                          to="home"
+                          spy={true}
+                          smooth={true}
+                          duration={400}
+                          offset={0}
+                          className='cursor-pointer'
+                          
+                        >
+                        <motion.button
+                        className="px-4 py-2 text-white rounded-md"
+                        whileHover={{scale:1.1,}}
+                        onClick={() => setShowNav(false)}>HOME
                         
-                      >
-                      <motion.button
-                      className="px-4 py-2 text-white rounded-md"
-                      whileHover={{scale:1.1,}}
-                      onClick={() => setShowNav(false)}>HOME
-                      
-                      </motion.button>
-                  </Link>
+                        </motion.button>
+                    </Link>
 
-                  <Link
-                        to="about"
-                        spy={true}
-                        smooth={true}
-                        duration={400}
-                        offset={-20}
-                        className='cursor-pointer'
+                    <Link
+                          to="about"
+                          spy={true}
+                          smooth={true}
+                          duration={400}
+                          offset={-20}
+                          className='cursor-pointer'
+                          
+                        >
+                        <motion.button
+                        className="px-4 py-2 text-white rounded-md "
+                        whileHover={{scale:1.1}}
+                        onClick={() => setShowNav(false)}>ABOUT
                         
-                      >
-                      <motion.button
-                      className="px-4 py-2 text-white rounded-md "
-                      whileHover={{scale:1.1}}
-                      onClick={() => setShowNav(false)}>ABOUT
-                      
-                      </motion.button>
-                  </Link>
+                        </motion.button>
+                    </Link>
 
-                  <Link
-                        to="projects"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        offset={10}
-                        className='cursor-pointer'
+                    <Link
+                          to="projects"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                          offset={10}
+                          className='cursor-pointer'
+                          
+                        >
+                        <motion.button
+                        className="px-4 py-2  text-white rounded-md"
+                        whileHover={{scale:1.1}}
+                        onClick={() => setShowNav(false)}>PROJECTS
                         
-                      >
-                      <motion.button
-                      className="px-4 py-2  text-white rounded-md"
-                      whileHover={{scale:1.1}}
-                      onClick={() => setShowNav(false)}>PROJECTS
-                      
-                      </motion.button>
-                  </Link>
+                        </motion.button>
+                    </Link>
 
-                  <Link
-                        to="contact"
-                        spy={true}
-                        smooth={true}
-                        duration={500}
-                        offset={10}
-                        className='cursor-pointer'
+                    <Link
+                          to="contact"
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                          offset={10}
+                          className='cursor-pointer'
+                          
+                        >
+                        <motion.button
+                        className="px-4 py-2  text-white rounded-md"
+                        whileHover={{scale:1.1}}
+                        onClick={() => setShowNav(false)}>CONTACT
                         
-                      >
-                      <motion.button
-                      className="px-4 py-2  text-white rounded-md"
-                      whileHover={{scale:1.1}}
-                      onClick={() => setShowNav(false)}>CONTACT
-                      
-                      </motion.button>
-                  </Link>
+                        </motion.button>
+                    </Link>
                 </motion.div>
               
               </motion.div>
