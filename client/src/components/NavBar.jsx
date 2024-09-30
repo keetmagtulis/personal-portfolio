@@ -46,7 +46,7 @@ const NavBar = () => {
         setShowNav(false);
         setIsHovered(false);
       }
-    }, 1500);
+    }, 2500);
   };
 
 
@@ -63,11 +63,11 @@ const NavBar = () => {
       className="flex w-full py-4 items-center top-0"
       
     >
-      <div className={`navigation flex mx-auto translate-x-28 px-8 z-40 transition-all duration-500 ease-in-out`} >
+      <div className={`navigation flex mx-auto translate-x-24 px-8 z-40 transition-all duration-500 ease-in-out`} >
         
         <ul className='unordered-list'>
 
-        <Link
+        {/* <Link
           to="home"
           spy={true}
           smooth={true}
@@ -79,7 +79,7 @@ const NavBar = () => {
             HOME
           </motion.div>
         
-        </Link>
+        </Link> */}
 
         <Link
           to="about"
@@ -166,58 +166,56 @@ const NavBar = () => {
     <motion.div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`fixed bottom-5 transform -translate-x-1/2 bg-neutral-800 h-3 w-80 rounded-lg flex items-center justify-center z-50 cursor-pointer opacity-95 border border-neutral-700 shadow-sm shadow-neutral-600 ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}
-        style={{left:'50%'}}    
-        onClick={() => {
-          if (showNav) {
-            setShowNav(false);
-          } else {
-            setShowNav(true);
-          }
-        }}
-
+        className={`fixed bottom-5 transform -translate-x-1/2  rounded-lg flex items-center z-50 justify-center   ${ isScrolled ? 'scroll-top-show': 'scroll-top'}`}
+        style={{left:'50%'}} 
       >
+
+        <motion.button
+        className='h-3 w-80 rounded-lg flex items-center bg-neutral-900 justify-center  cursor-pointer border border-neutral-700 opacity-95 shadow-sm shadow-neutral-800'
+        whileHover={{scale:1.1}}
+        >
+
+        </motion.button>
       
       </motion.div>
     
     <AnimatePresence>
         {showNav && (
-          <>
-            {/* Blur Background */}
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, backdropFilter: "blur(10px)" }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
-            /> */}
 
 
-              <motion.div className={`bottom-10 fixed left-1/2 transform -translate-x-1/2  flex items-center justify-center z-50 space-x-3`} 
-                initial={{ opacity: 0 }} // Start hidden and slightly above
-                animate={{ opacity: 1 }} // Animate to visible and at original position
-                exit={{ opacity: 0,}} // Slide back up and fade out
-                transition={{ duration: 0.3 }} // Slightly faster for button animation
+
+              <motion.div 
+                className={`bottom-10 fixed transform -translate-x-1/2  flex items-center justify-center z-50`}
+                style={{left:'50%'}} 
+                initial={{ opacity: 0,}} 
+                animate={{ opacity: 1, }} 
+                exit={{ opacity: 0,}} 
+                transition={{ duration: 0.3 }} 
               >
-                    
-                    <Link
+                <motion.div
+                  className={`flex items-center justify-center bg-neutral-900 rounded-lg w-1/3 h-20 space-x-2`}
+                  initial={{ opacity: 0, translateY: 20 }} 
+                  animate={{ opacity: 1, translateY: 0 }} 
+                  exit={{ opacity: 0, translateY: 20 }}   
+                  transition={{ duration: 0.3, ease: "easeInOut" }}>    
+                  <Link
                         to="home"
                         spy={true}
                         smooth={true}
-                        duration={100}
+                        duration={400}
                         offset={0}
                         className='cursor-pointer'
                         
                       >
                       <motion.button
-                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
-                      whileHover={{scale:1.1}}
+                      className="px-4 py-2 text-white rounded-md"
+                      whileHover={{scale:1.1,}}
                       onClick={() => setShowNav(false)}>HOME
                       
                       </motion.button>
-                      </Link>
+                  </Link>
 
-                      <Link
+                  <Link
                         to="about"
                         spy={true}
                         smooth={true}
@@ -227,14 +225,14 @@ const NavBar = () => {
                         
                       >
                       <motion.button
-                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      className="px-4 py-2 text-white rounded-md "
                       whileHover={{scale:1.1}}
                       onClick={() => setShowNav(false)}>ABOUT
                       
                       </motion.button>
-                      </Link>
+                  </Link>
 
-                      <Link
+                  <Link
                         to="projects"
                         spy={true}
                         smooth={true}
@@ -244,14 +242,14 @@ const NavBar = () => {
                         
                       >
                       <motion.button
-                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      className="px-4 py-2  text-white rounded-md"
                       whileHover={{scale:1.1}}
                       onClick={() => setShowNav(false)}>PROJECTS
                       
                       </motion.button>
-                      </Link>
+                  </Link>
 
-                      <Link
+                  <Link
                         to="contact"
                         spy={true}
                         smooth={true}
@@ -261,21 +259,16 @@ const NavBar = () => {
                         
                       >
                       <motion.button
-                      className="px-4 py-2 bg-neutral-800 text-white rounded-md mt-3"
+                      className="px-4 py-2  text-white rounded-md"
                       whileHover={{scale:1.1}}
                       onClick={() => setShowNav(false)}>CONTACT
                       
                       </motion.button>
-                      </Link>
-
-
-
-
+                  </Link>
+                </motion.div>
+              
               </motion.div>
-
-
-
-          </>
+     
         )}
       </AnimatePresence>
 
