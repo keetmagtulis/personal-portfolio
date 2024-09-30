@@ -1,7 +1,7 @@
 import React from "react";
 import '../../src/styles/index.css'; // Ensure this file imports Tailwind CSS correctly
 import { motion } from "framer-motion";
-import { Link as RouterLink } from "react-router-dom";
+
 
 
 
@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     
-      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-3/4 min-h-auto mt-32 mb-32">
+      <div className="flex items-center justify-center space-x-16 rounded-lg mx-auto w-3/4 min-h-auto mt-28 mb-28">
         
         
         <motion.div 
@@ -64,7 +64,7 @@ const Home = () => {
             whileHover={{scale: 1.1,}}
             whileTap={{scale: 0.8}}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="bg-neutral-800 text-white px-6 py-2 my-2 rounded-full flex items-center justify-center drop-shadow-xl"
+            className="bg-neutral-800 text-white px-6 py-2 mt-5 rounded-full flex items-center justify-center drop-shadow-xl"
             onClick={onButtonClick}>
             Download CV <img src="/images/download.ico" alt="Download" className="w-3 ml-3 flex items-center justify-center"></img>   
           </motion.button>
