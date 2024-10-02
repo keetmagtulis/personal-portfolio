@@ -38,6 +38,14 @@ const NavBar = () => {
     setShowNav(true);
     setIsHovered(true);
   };
+
+  const hoveredNavBar = () => {
+
+    setShowNav(true);
+    setIsHovered(true);
+
+  };
+
  
   const handleMouseLeave = () => {
    
@@ -48,6 +56,8 @@ const NavBar = () => {
       }
     }, 3500);
   };
+
+
 
 
 
@@ -171,7 +181,7 @@ const NavBar = () => {
       >
 
         <motion.button
-        className='h-3 w-80 rounded-lg flex items-center bg-neutral-900 justify-center  cursor-pointer border border-neutral-700 opacity-95 shadow-sm shadow-neutral-800'
+        className='h-3 w-72 rounded-lg flex items-center bg-neutral-800 justify-center  cursor-pointer border border-neutral-700'
         whileHover={{scale:1.1}}
         >
 
@@ -193,7 +203,9 @@ const NavBar = () => {
                 transition={{ duration: 0.3 }} 
               >
                 <motion.div
-                  className={`flex items-center justify-center bg-neutral-900 rounded-lg w-full h-20 space-x-2`}
+                  onMouseEnter={hoveredNavBar}
+                  onMouseLeave={handleMouseLeave}
+                  className={`flex items-center justify-center bg-neutral-800 rounded-lg w-full h-20 space-x-2`}
                   initial={{ opacity: 0, translateY: 20 }} 
                   animate={{ opacity: 1, translateY: 0 }} 
                   exit={{ opacity: 0, translateY: 20 }}   
@@ -208,8 +220,8 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2 text-white rounded-md"
-                        whileHover={{scale:1.1,}}
+                        className="px-4 py-2 text-white w-full h-16"
+                        whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>HOME
                         
                         </motion.button>
@@ -225,8 +237,8 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2 text-white rounded-md "
-                        whileHover={{scale:1.1}}
+                        className="px-4 py-2 text-white w-full h-16"
+                        whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>ABOUT
                         
                         </motion.button>
@@ -242,8 +254,8 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2  text-white rounded-md"
-                        whileHover={{scale:1.1}}
+                        className="px-4 py-2  text-white w-full h-16"
+                        whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>PROJECTS
                         
                         </motion.button>
@@ -259,8 +271,8 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2  text-white rounded-md"
-                        whileHover={{scale:1.1}}
+                        className="px-4 py-2  text-white w-full h-16"
+                        whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>CONTACT
                         
                         </motion.button>
