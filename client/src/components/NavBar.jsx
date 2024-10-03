@@ -9,7 +9,6 @@ const NavBar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false)
   const [showNav, setShowNav] = useState(false)
-  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(()=> {
     
@@ -36,25 +35,11 @@ const NavBar = () => {
 
   const handleMouseEnter = () => {
     setShowNav(true);
-    setIsHovered(true);
-  };
-
-  const hoveredNavBar = () => {
-
-    setShowNav(true);
-    setIsHovered(true);
-
   };
 
  
   const handleMouseLeave = () => {
-   
-    setTimeout(() => {
-      if (isHovered) {
-        setShowNav(false);
-        setIsHovered(false);
-      }
-    }, 3500);
+      setShowNav(false);
   };
 
 
@@ -195,16 +180,17 @@ const NavBar = () => {
 
 
               <motion.div 
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 className={`bottom-10 fixed transform -translate-x-1/2  flex items-center justify-center z-50 w-1/3`}
                 style={{left:'50%'}} 
                 initial={{ opacity: 0,}} 
                 animate={{ opacity: 1, }} 
                 exit={{ opacity: 0,}} 
-                transition={{ duration: 0.3 }} 
+                transition={{ duration: 0.3,}}
+ 
               >
                 <motion.div
-                  onMouseEnter={hoveredNavBar}
-                  onMouseLeave={handleMouseLeave}
                   className={`flex items-center justify-center bg-neutral-800 rounded-lg w-full h-20 space-x-2`}
                   initial={{ opacity: 0, translateY: 20 }} 
                   animate={{ opacity: 1, translateY: 0 }} 
