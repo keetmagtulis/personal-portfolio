@@ -4,6 +4,10 @@
 
 Welcome to my personal portfolio! This repository showcases my projects, skills, and experiences in the field of technology and software development. Here, you will find detailed descriptions of my work, code samples, and other relevant information that highlights my expertise and accomplishments.
 
+## About Me
+
+I am a passionate and dedicated IT professional with a background in Computer Science. I have experience working in customer service support within a BPO environment and have been an IT professional since March 2023. My goal is to leverage my skills and knowledge to create innovative solutions and contribute to meaningful projects.
+
 ## Table of Contents
 
 - [About Me](#about-me)
@@ -13,17 +17,6 @@ Welcome to my personal portfolio! This repository showcases my projects, skills,
 - [Experience](#experience)
 - [Contact](#contact)
 
-## About Me
-
-I am a passionate and dedicated IT professional with a background in Computer Science. I have experience working in customer service support within a BPO environment and have been an IT professional since March 2023. My goal is to leverage my skills and knowledge to create innovative solutions and contribute to meaningful projects.
-
-## Projects
-
-### Project 1: Chat-Bot Integration for Intranet Website
-
-- **Description:** Developed a Chat-Bot using the Rasa framework to provide users with FAQs and basic support.
-- **Technologies Used:** Rasa, Python, NLU, Dialog Management
-- **Highlights:** Successfully integrated the Chat-Bot into the intranet, improving user interaction and support efficiency.
 
 ## Skills
 
