@@ -191,7 +191,7 @@ const NavBar = () => {
  
               >
                 <motion.div
-                  className={`flex items-center justify-center bg-neutral-800 rounded-lg w-full h-20 space-x-2`}
+                  className={`flex items-center justify-center bg-neutral-800 rounded-xl w-full h-20 space-x-2`}
                   initial={{ opacity: 0, translateY: 20 }} 
                   animate={{ opacity: 1, translateY: 0 }} 
                   exit={{ opacity: 0, translateY: 20 }}   
@@ -206,7 +206,7 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2 text-white w-full h-16"
+                        className="px-4 py-2 text-white w-full h-16 rounded-xl"
                         whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>HOME
                         
@@ -223,7 +223,7 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2 text-white w-full h-16"
+                        className="px-4 py-2 text-white w-full h-16 rounded-xl"
                         whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>ABOUT
                         
@@ -240,7 +240,7 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2  text-white w-full h-16"
+                        className="px-4 py-2  text-white w-full h-16 rounded-xl"
                         whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>PROJECTS
                         
@@ -257,7 +257,7 @@ const NavBar = () => {
                           
                         >
                         <motion.button
-                        className="px-4 py-2  text-white w-full h-16"
+                        className="px-4 py-2  text-white w-full h-16 rounded-xl"
                         whileHover={{scale:1.1, background: "rgb(90,90,90,0.5)"}}
                         onClick={() => setShowNav(false)}>CONTACT
                         
