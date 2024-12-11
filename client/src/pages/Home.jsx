@@ -53,7 +53,7 @@ const Home = () => {
           className=" max-w-md">
           <div>
           <h2 className="text-5xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-500 bg-clip-text text-transparent">SOFTWARE</h2>
-          <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-500 bg-clip-text text-transparent">DEVELOPER</h1>
+          <h1 className="text-7xl font-semibold bg-gradient-to-r from-black via-neutral-700 to-neutral-700 bg-clip-text text-transparent">DEVELOPER</h1>
           </div>
 
           <p className="my-2 ml-2">Hi, I’m Kit. I’m an IT professional with a deep curiosity for technology and how things work.</p>
