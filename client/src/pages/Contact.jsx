@@ -143,7 +143,7 @@ const Contact = () => {
               />
             </RouterLink>
 
-            <RouterLink to="https://www.messenger.com/t/100054884522654" target="_blank">
+            <RouterLink to="https://www.facebook.com/kitdominic.magtulis" target="_blank">
               <motion.img
                 whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.9 }}
