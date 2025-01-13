@@ -36,7 +36,7 @@ const Projects = () => {
     
         {/* Grid with fixed size items */}
         <div className="grid gap-7 p-10 lg:grid-rows-3 lg:grid-cols-1" 
-             style={{ gridTemplateRows: '600px 600px 600px', width: '86%' }}> {/* Fixed height for each row */}
+             style={{ gridTemplateRows: '600px 600px', width: '86%' }}> {/* Fixed height for each row */}
           
         {/* Project 1 */}
         <motion.div
@@ -131,11 +131,11 @@ const Projects = () => {
               >
                   
                 <motion.button 
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.8 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  className="bg-transparent border border-neutral-100 text-white px-6 py-2 mt-7 rounded-full flex items-center justify-center drop-shadow-xl">
-                  View Project
+                  // whileHover={{ scale: 1.1 }}
+                  // whileTap={{ scale: 0.8 }}
+                  // transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="bg-transparent border border-red-700 text-red-700 px-6 py-2 mt-7 rounded-full flex items-center justify-center drop-shadow-xl">
+                  Under Maintenance
                 </motion.button>
 
               </RouterLink>
@@ -158,7 +158,7 @@ const Projects = () => {
         </motion.div>
 
           {/* Project 3 */}
-          <motion.div className="bg-gradient-to-r from-black from-0% via-neutral-900 via-50% to-neutral-700 to-100% rounded-lg shadow-md p-6 h-full"
+          {/* <motion.div className="bg-gradient-to-r from-black from-0% via-neutral-900 via-50% to-neutral-700 to-100% rounded-lg shadow-md p-6 h-full"
           initial= {{ opacity: 0, x: 50}}
           whileInView={{opacity: 1, x: 0 ,  
           transition: {
@@ -167,7 +167,7 @@ const Projects = () => {
           ease: [0, 0.71, 0.2, 1.01],
           }}}
           viewport={{root: scrollRef}}>
-          </motion.div>
+          </motion.div> */}
 
 
                               
